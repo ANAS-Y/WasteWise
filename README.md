@@ -1,0 +1,2 @@
+# WasteWise
+ WasteWise, a waste management system available on a website and mobile applications (iOS and  Android) to help municipalities and businesses manage waste collection and disposal efficiently. Goals: - Reduce Waste: Minimize the amount of waste sent to landfills. - Promote Recycling: Encourage recycling through tracking and reporting tools. - Improve Efficiency: Optimize waste collection routes to reduce fuel consumption and operational costs. - Enhance Sustainability: Support environmental sustainability efforts.
