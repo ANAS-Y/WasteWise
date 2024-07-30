@@ -84,7 +84,7 @@
 <body>
   
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" id="main">
             <!-- Brand Logo -->
         <img class="WasteWisePng6" src="images/WASTE WISE PNG 6.png" alt="Waste Wise Logo">
    
@@ -133,8 +133,8 @@
                 </div>
                 </div>
                 <div class="RealTimeContainer" style="margin-top: 15%; margin-left:16%; text-align: center; display: inline-block;">
-                    <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 250px; height: 40px; background: #12AC57; border-radius: 40px">
-                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Real Time Waste Monitoring</div>
+                    <div class="Rectangle25" style="margin-right:50%; text-align: center; width:100%; height: 40px; background: #12AC57; border-radius: 40px">
+                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Waste Monitoring</div>
                     </div>
                     <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
                         <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/—Pngtree—dashboard admin monitor monitoring processing_4394991 1.png" />
@@ -165,7 +165,7 @@
             </di>
 
             <h1 class="hServices" style=" text-align:center; color:black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">RESOURCES</h1>
-<button class="btn" style="float: inline-start; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Video on Recycling</button>
+<button class="btn" style="float: inline-start; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Videos on Recycling</button>
 
             <div class="video1Container" style="  text-align: center; display: inline-block;">
                 <div class="Rectangle25" style=" width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
@@ -215,17 +215,16 @@
                 <h1 class="hServices" style=" text-align:center; black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">WASTE CLASSIFIER</h1>
                 
                 <div class="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
-                    Welcome to WasteWise, your trusted partner in sustainable waste management solutions. 
-                    At WasteWise, we are committed to transforming waste into opportunities. 
-                    With years of experience in the industry, we specialize in providing efficient and environmentally
-                     responsible waste collection, recycling, and disposal services.
-                     <br/>Our mission is simple: to help businesses and communities minimize waste generation, maximize
-                      recycling efforts, and reduce their environmental footprint. 
-                     Through innovative technologies and dedicated service, we strive to create cleaner, greener
-                      environments for generations to come.<br/>
-                    Join us in making a difference. Together, we can build a more sustainable future.</div>
+                    Waste Classifier
 
-                <button class="btn" style="margin-top: 2%; margin-left:34%; width:30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Learn More</button>
+                    A Waste Classifier is a system used to categorize waste into different types, enabling efficient waste management and disposal. The classifier sorts waste into three main categories:
+                    1. Recyclable: Materials that can be processed and transformed into new products, such as paper, plastic, glass, and metal.
+                    2. Organic: Biodegradable waste, including food waste, yard trimmings, and other natural materials that can be composted.
+                    3. Non-Recyclable: Waste that cannot be recycled or composted, such as hazardous waste, textiles, and ceramics, which require specialized disposal methods.
+                    
+                    By accurately classifying waste, Waste Classifiers help reduce contamination, increase recycling rates, and promote sustainable waste management practices.</div>
+
+                <button class="btn" style="margin-top: 2%; margin-left:40%; width:20%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="loginURL()">Continue</button>
     </div>
     </div>
     <!-- Contact Us Section -->
@@ -240,14 +239,17 @@
             <p class="text-center">Phone:+234 8086777408</p> 
             <p class="text-center">Address: Jewel Team No 12</p>   
             </div>
-            <div class="CareerexJewelTeam" style="margin-top: 5%; margin-left:37%; color: black; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word"> CAREEREX JEWEL TEAM &copy; 2024</div>
+            <div class="Rectangle47" style="margin-left:95%; padding-top:1%; text-align: center; width:5%; height: 61px; background: #a00419; >
+                <div class="ContactUs" style="text-align: center; color: white; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word"><a href="#main" class="text-white">UP</a></div>
+            </div>
+            <div class="CareerexJewelTeam" style=" margin-left:37%; color: black; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word"> CAREEREX JEWEL TEAM &copy; 2024</div>
            </div>
     </div>
-
-
-    
-  
-
+    <script>
+        function loginURL(){
+            location.href ="login.html"
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
