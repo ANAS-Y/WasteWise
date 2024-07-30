@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .LoginPage {
+            width: 1280px;
+            height: 700px;
+            position: relative;
+            background: white;
+            margin: auto;
+        }
+        .Label {
+            color: black;
+            font-size: 14px;
+            font-family: Inter, sans-serif;
+            font-weight: 600;
+            line-height: 20px;
+        }
+        .Input {
+            padding: 10px 14px;
+            background: white;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            border: 1px solid #D0D5DD;
+            font-size: 14px;
+            width: 100%;
+        }
+        .Text {
+            color: #98A2B3;
+            font-size: 12px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        .ButtonBase {
+            width: 100%;
+            padding: 10px 16px;
+            background: #15AD56;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            border: none;
+            color: #EAEBEC;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .CreateAnAccount {
+            color: black;
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 16px;
+        }
+        .Frame763 {
+            justify-content: center;
+            display: flex;
+            gap: 2px;
+            position: absolute;
+            align-items: flex-start;
+             
+        }
+        .Frame763 .DonTHaveAnAccount {
+            color: black;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .Frame763 .SignUp {
+            color: #15AD56;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 600;
+            line-height: 24px;
+           
+        }
+        .Rectangle50 {
+            width: 562px;
+            height: 700px;
+            position: absolute;
+            background: linear-gradient(180deg, rgba(98.98, 246.60, 162.11, 0.37) 0%, rgba(0, 0, 0, 0.37) 77%);
+            left: 0px;
+            top: 0px;
+        }
+        .PexelsSarahChai72629331{
+            width: 562px;
+            height: 700px; 
+            left: 0px; top: 0px;
+            position: absolute
+        }
+        .TurningWasteIntoOpportunity {
+            width: 302px;
+            height: 26px;
+            position: absolute;
+            color: white;
+            font-size: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 20px;
+            word-wrap: break-word;
+        }
+        .WasteWisePng7 {
+            width: 159px;
+            height: 32px;
+            position: absolute;
+        }
+        .LoginYourAccount {
+            color: black;
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 16px;
+            word-wrap: break-word;
+            position: absolute;
+        }
+        .EnterYourCredentialsAndGetReadyToExplore {
+            color: black;
+            font-size: 14px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            line-height: 24px;
+            word-wrap: break-word;
+            position: absolute;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .VuesaxOutlineEye {
+            width: 16px;
+            height: 16px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .Eye {
+            width: 16px;
+            height: 16px;
+            position: relative;
+        }
+        .Eye .Vector {
+            background: #959CA2;
+        }
+        .Eye .Vector:nth-child(1) {
+            width: 5.77px;
+            height: 5.77px;
+            position: absolute;
+            left: 5.11px;
+            top: 5.11px;
+        }
+        .Eye .Vector:nth-child(2) {
+            width: 14.05px;
+            height: 12.03px;
+            position: absolute;
+            left: 0.97px;
+            top: 1.99px;
+        }
+        .Eye .Vector:nth-child(3) {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="LoginPage">
+        <img class="PexelsSarahChai72629331" src="images/pexels-sarah-chai-7262933 1.png" />
+        <div class="Rectangle50"></div>
+        <div class="TurningWasteIntoOpportunity" style="left: 33px; top: 560px;">Turning Waste into Opportunity!</div>
+        <img class="WasteWisePng7" style="left: 851px; top: 95px;" src="images/WASTE WISE PNG 7.png" />
+        <div class="LoginYourAccount" style="left: 704px; top: 205px;">Login your account</div>
+        <div class="EnterYourCredentialsAndGetReadyToExplore" style="left: 704px; top: 223px;">Enter your credentials and get ready to explore!</div>
+        <form style="position: absolute; left: 704px; top: 304px; width: 453px;">
+            <div class="form-group">
+                <label for="email" class="Label">Email Address</label>
+                <input type="email" class="Input" id="email" placeholder="Enter Address">
+            </div>
+            <div class="form-group" style="position: relative;">
+                <label for="password" class="Label">Password</label>
+                <input type="password" class="Input" id="password" placeholder="Enter Password">
+                <div class="VuesaxOutlineEye" style="position: absolute; right: 14px; top: 45px;">
+                    <div class="Eye">
+                        <div class="Vector"></div>
+                        <div class="Vector"></div>
+                        <div class="Vector"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="ButtonBase" style="width: 453px; height: 44px;">Login</button>
+        </form>
+        <div class="Frame763" style="left: 794px; top: 560px;">
+            <div class="DonTHaveAnAccount">Don’t have an account?</div>
+            <div class="SignUp"><a class="" href="signup.html">Sign up</a></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

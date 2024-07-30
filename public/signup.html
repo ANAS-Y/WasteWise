@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .SignUpPage {
+            width: 1280px;
+            height: 832px;
+            position: relative;
+            background: #FCFFFD;
+            margin: auto;
+        }
+        .Label {
+            color:black;
+            font-size: 14px;
+            font-family: Inter, sans-serif;
+            font-weight: 600;
+            line-height: 20px;
+        
+        }
+        .Input {
+            padding: 10px 14px;
+            background: white;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            border: 1px solid #D0D5DD;
+            font-size: 14px;
+            width: 100%; 
+            
+        }
+        .Text {
+            color: #98A2B3;
+            font-size: 12px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        .ButtonBase {
+            width: 99%;
+            padding: 12px 16px;
+            background: #15AD56;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 8px;
+            border: none;
+            color: #EAEBEC;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            line-height: 20px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .CreateAnAccount {
+            color: black;
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 16px;
+        }
+        .Frame763 {
+            justify-content: center;
+            display: flex;
+            gap: 2px;
+        }
+        .Frame763 .AlreadyHaveAnAccount {
+            color: black;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .Frame763 .SignIn {
+            color: #15AD56;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 600;
+            line-height: 24px;
+        }
+        .Rectangle50 {
+            width: 553px;
+            height: 832px;
+            background: rgba(29.09, 225.25, 48.71, 0.17);
+        }
+        .Pngegg3 {
+            width: 445px;
+            height: 377px;
+        }
+        .WastewiseIsADigitalProductThatIsEssentialForEnvironmentalProtectionResourceConservationAndPublicHealth {
+            width: 457px;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            font-family: Inter, sans-serif;
+            font-weight: 500;
+        }
+        .WasteWisePng7 {
+            width: 159px;
+            height: 32px;
+        }
+        .EnterYourCredentialsAndGetReadyToExplore {
+            color: black;
+            font-size: 14px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            line-height: 40px;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="SignUpPage">
+        <div style="position: absolute; left: 142px; top: 70px;">
+            <div class="CreateAnAccount">Create an Account.</div>
+            <div class="EnterYourCredentialsAndGetReadyToExplore">Enter your credentials and get ready to explore!</div>
+        </div>
+        <form style="position: absolute; left: 142px; top: 160px; width: 453px;">
+            <div class="form-group">
+                <div style="width:50%; display: inline; float: left; padding: 1%;">
+                    <label for="firstName" class="Label">First Name</label>
+                    <input type="text" class="Input" id="firstName" placeholder="First Name">
+                </div>
+            <div style="width:50%; display: inline;float: left; padding: 1%;">
+                <label for="lastName" class="Label">Last Name</label>
+                <input type="text" class="Input" id="lastName" placeholder="Last Name">
+            </div>
+            </div>
+           
+            <div class="form-group">
+                <label for="email" class="Label">Email Address</label>
+                <input type="email" class="Input" id="email" placeholder="Enter Address">
+            </div>
+            <div class="form-group">
+                <label for="phone" class="Label">Phone Number</label>
+                <input type="text" class="Input" id="phone" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <label for="country" class="Label">Country</label>
+                <select class="Input" id="country">
+                    <option>Select Country</option>
+                    <option value="USA">USA</option>
+                    <option value="Nigeria">Nigeria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div style="width:50%; display: inline; float: left; padding: 1%;">
+                <label for="state" class="Label">State</label>
+                <select class="Input" id="state">
+                    <option>Select State</option>
+                </select>
+            </div>
+            
+            <div style="width:50%; display: inline; float: left; padding: 1%;">
+                <label for="lga" class="Label">LGA</label>
+                <select class="Input" id="lga">
+                    <option>Select LGA</option>
+                </select>
+            </div>
+        </div>
+            <div class="form-group">
+                <div style="width:50%; display: inline; float: left; padding: 1%;">
+                <label for="password" class="Label">Password</label>
+                <input type="password" class="Input" id="password" placeholder="Enter Password">
+            </div>
+            <div style="width:50%; display: inline; float: left; padding: 1%;">
+                <label for="confirmPassword" class="Label">Confirm Password</label>
+                <input type="password" class="Input" id="confirmPassword" placeholder="Enter Confirm Password">
+            </div>
+        </div>
+            <button type="submit" class="ButtonBase">Sign up</button>
+        </form>
+        <div class="Frame763" style="position: absolute; left: 232px; top: 760px;">
+            <div class="AlreadyHaveAnAccount">Already have an account?</div>
+            <div class="SignIn"><a class="" href="login.html">Sign in</a></div>
+        </div>
+        <div class="Rectangle50" style="position: absolute; left: 727px; top: 0;"></div>
+        <img class="Pngegg3" style="position: absolute; left: 781px; top: 187px;" src="images/pngegg 3.png" />
+        
+        <div class="WastewiseIsADigitalProductThatIsEssentialForEnvironmentalProtectionResourceConservationAndPublicHealth" style="position: absolute; left: 775px; top: 100px;">
+            Wastewise is a digital product that is essential for environmental protection, resource conservation and public health.
+        </div>
+        <img class="WasteWisePng7" style="position: absolute; left: 924px; top: 53px;" src="images/WASTE WISE PNG 7.png" />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const stateOptions = {
+            USA: ["California", "Texas", "Florida"],
+            Nigeria: ["Lagos", "Abuja", "Kano"]
+        };
+
+        const lgaOptions = {
+            Lagos: ["Ikeja", "Surulere", "Epe"],
+            Abuja: ["Garki", "Wuse", "Maitama"],
+            Kano: ["Nassarawa", "Tarauni", "Dala"],
+            California: ["Los Angeles County", "San Diego County", "Orange County"],
+            Texas: ["Harris County", "Dallas County", "Tarrant County"],
+            Florida: ["Miami-Dade County", "Broward County", "Palm Beach County"]
+        };
+
+        document.getElementById('country').addEventListener('change', function() {
+            const country = this.value;
+            const stateSelect = document.getElementById('state');
+            const lgaSelect = document.getElementById('lga');
+
+            stateSelect.innerHTML = '<option>Select State</option>';
+            lgaSelect.innerHTML = '<option>Select LGA</option>';
+
+            if (country in stateOptions) {
+                stateOptions[country].forEach(state => {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.textContent = state;
+                    stateSelect.appendChild(option);
+                });
+            }
+        });
+
+        document.getElementById('state').addEventListener('change', function() {
+            const state = this.value;
+            const lgaSelect = document.getElementById('lga');
+
+            lgaSelect.innerHTML = '<option>Select LGA</option>';
+
+            if (state in lgaOptions) {
+                lgaOptions[state].forEach(lga => {
+                    const option = document.createElement('option');
+                    option.value = lga;
+                    option.textContent = lga;
+                    lgaSelect.appendChild(option);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

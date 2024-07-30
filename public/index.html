@@ -3,174 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
+    <title>Home Page</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .SignUpPage {
-            width: 1280px;
-            height: 832px;
+        body {
+            font-family: 'JejuGothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            justify-content: flex-start;
+            align-items: center;
+            gap: 40px;
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+        .navbar a {
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .hero {
             position: relative;
-            background: #FCFFFD;
-            margin: auto;
-        }
-        .Label {
-            color: rgba(0, 0, 0, 0.20);
-            font-size: 14px;
-            font-family: Inter, sans-serif;
-            font-weight: 600;
-            line-height: 20px;
-        }
-        .Input {
-            padding: 10px 14px;
-            background: white;
-            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-            border-radius: 8px;
-            border: 1px solid #D0D5DD;
-            font-size: 14px;
-            width: 100%;
-        }
-        .Text {
-            color: #98A2B3;
-            font-size: 12px;
-            font-family: Inter, sans-serif;
-            font-weight: 400;
-            line-height: 20px;
-        }
-        .ButtonBase {
-            width: 100%;
-            padding: 10px 16px;
-            background: #15AD56;
-            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-            border-radius: 8px;
-            border: none;
-            color: #EAEBEC;
-            font-size: 16px;
-            font-family: Inter, sans-serif;
-            font-weight: 700;
-            line-height: 20px;
-            cursor: pointer;
-        }
-        .CreateAnAccount {
-            color: black;
-            font-size: 24px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 16px;
-        }
-        .Frame763 {
-            justify-content: center;
-            display: flex;
-            gap: 2px;
-        }
-        .Frame763 .AlreadyHaveAnAccount {
-            color: black;
-            font-size: 16px;
-            font-family: Inter, sans-serif;
-            font-weight: 400;
-            line-height: 24px;
-        }
-        .Frame763 .SignIn {
-            color: #15AD56;
-            font-size: 16px;
-            font-family: Inter, sans-serif;
-            font-weight: 600;
-            line-height: 24px;
-        }
-        .Rectangle50 {
-            width: 553px;
-            height: 832px;
-            background: rgba(29.09, 225.25, 48.71, 0.17);
-        }
-        .Pngegg3 {
-            width: 445px;
-            height: 377px;
-        }
-        .WastewiseIsADigitalProductThatIsEssentialForEnvironmentalProtectionResourceConservationAndPublicHealth {
-            width: 457px;
             text-align: center;
             color: black;
-            font-size: 14px;
-            font-family: Inter, sans-serif;
-            font-weight: 400;
         }
-        .WasteWisePng7 {
-            width: 159px;
-            height: 32px;
+        .hero img {
+            width: 100%;
+            height: auto;
         }
-        .EnterYourCredentialsAndGetReadyToExplore {
+        .overlay {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            text-align: center;
             color: black;
-            font-size: 14px;
-            font-family: Inter, sans-serif;
-            font-weight: 400;
-            line-height: 24px;
+            width: 731px;
+            height: 108px; 
+            background: rgba(18, 172, 87, 0.45);
+            padding:1%;
+            
         }
-        .form-group {
-            margin-bottom: 0.2rem;
+        .services {
+            position: relative;
+            color: black;
+        }
+        .services img {
+            width: 100%;
+            height: auto;
+        }
+        .services_overlay {
+            position: absolute;
+            top: 5%;
+            left: 2%;
+            right: 2%;
+            color: black;
+            padding:1%;
+            
+        }
+        .overlay .title {
+            font-size: 36px;
+            font-weight: 400;
+        }
+        .overlay .btn {
+            background: #12AC57;
+            border-radius: 40px;
+            padding: 12px 30px;
+            color: #FFFDFD;
+            font-size: 24px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="SignUpPage">
-        <div style="position: absolute; left: 142px; top: 92px;">
-            <div class="CreateAnAccount">Create an Account.</div>
-            <div class="EnterYourCredentialsAndGetReadyToExplore">Enter your credentials and get ready to explore!</div>
+  
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+            <!-- Brand Logo -->
+        <img class="WasteWisePng6" src="images/WASTE WISE PNG 6.png" alt="Waste Wise Logo">
+   
+        <a href="#main">Main</a>
+        <a href="#services">Services</a>
+        <a href="#resources">Resources</a>
+        <a href="#waste-classifier">Waste Classifier</a>
+        <a href="#contact-us">Contact Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img class="Recycling22" src="images/recycling-2 2.png" alt="Recycling">
+        
+        <div class="overlay" >
+            <h1 class="title">Towards a CLEANER<br>and more CONSERVED environment</h1>
+            <button class="btn" style="width: 50%;">Learn More</button>
         </div>
-        <form style="position: absolute; left: 142px; top: 200px; width: 453px;">
-            <div class="form-group">
-                <label for="firstName" class="Label">First Name</label>
-                <input type="text" class="Input" id="firstName" placeholder="First Name">
-            </div>
-            <div class="form-group">
-                <label for="lastName" class="Label">Last Name</label>
-                <input type="text" class="Input" id="lastName" placeholder="Last Name">
-            </div>
-            <div class="form-group">
-                <label for="email" class="Label">Email Address</label>
-                <input type="email" class="Input" id="email" placeholder="Enter Address">
-            </div>
-            <div class="form-group">
-                <label for="phone" class="Label">Phone Number</label>
-                <input type="text" class="Input" id="phone" placeholder="Phone Number">
-            </div>
-            <div class="form-group">
-                <label for="country" class="Label">Country</label>
-                <select class="Input" id="country">
-                    <option>Select Country</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="state" class="Label">State</label>
-                <select class="Input" id="state">
-                    <option>Select State</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="lga" class="Label">LGA</label>
-                <select class="Input" id="lga">
-                    <option>Select LGA</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="password" class="Label">Password</label>
-                <input type="password" class="Input" id="password" placeholder="Enter Password">
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword" class="Label">Confirm Password</label>
-                <input type="password" class="Input" id="confirmPassword" placeholder="Enter Confirm Password">
-            </div>
-            <button type="submit" class="ButtonBase">Sign up</button>
-        </form>
-        <div class="Frame763" style="position: absolute; left: 232px; top: 716px;">
-            <div class="AlreadyHaveAnAccount">Already have an account?</div>
-            <div class="SignIn">Sign in</div>
-        </div>
-        <div class="Rectangle50" style="position: absolute; left: 727px; top: 0;"></div>
-        <img class="Pngegg3" style="position: absolute; left: 781px; top: 187px;" src="https://via.placeholder.com/445x377" />
-        <div class="WastewiseIsADigitalProductThatIsEssentialForEnvironmentalProtectionResourceConservationAndPublicHealth" style="position: absolute; left: 775px; top: 658px;">
-            Wastewise is a digital product that is essential for environmental protection, resource conservation and public health.
-        </div>
-        <img class="WasteWisePng7" style="position: absolute; left: 924px; top: 53px;" src="https://via.placeholder.com/159x32" />
     </div>
+
+    <!-- Services Section -->
+    <div class="services" id="services">
+        <img class="Recycling23"  src="images/recycling-2 3.png" />
+        <div class="services_overlay" >
+            <h1 class="hServices" style=" text-align:center; black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">SERVICES</h1>
+            <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">About Us</button>
+            
+            <div class="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
+                Welcome to WasteWise, your trusted partner in sustainable waste management solutions. 
+                At WasteWise, we are committed to transforming waste into opportunities. 
+                With years of experience in the industry, we specialize in providing efficient and environmentally
+                 responsible waste collection, recycling, and disposal services.
+                 <br/>Our mission is simple: to help businesses and communities minimize waste generation, maximize
+                  recycling efforts, and reduce their environmental footprint. 
+                 Through innovative technologies and dedicated service, we strive to create cleaner, greener
+                  environments for generations to come.<br/>
+                Join us in making a difference. Together, we can build a more sustainable future.</div>
+                
+                <div class="DumpsiteLContainer" style="margin-top: 15%; margin-left:15%; text-align: center; display: inline-block;">
+                <div class="Rectangle25" style=" width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
+                    <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Dumpsite Locator</div>
+                </div>
+                <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                    <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/—Pngtree—3d pin map location icon_9117037 1.png" />
+                    <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
+                </div>
+                </div>
+                <div class="RealTimeContainer" style="margin-top: 15%; margin-left:16%; text-align: center; display: inline-block;">
+                    <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 250px; height: 40px; background: #12AC57; border-radius: 40px">
+                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Real Time Waste Monitoring</div>
+                    </div>
+                    <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                        <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/—Pngtree—dashboard admin monitor monitoring processing_4394991 1.png" />
+                        <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
+                    </div>
+                    </div>
+
+                    <div class="TipsContainer" style="margin-top: 15%; margin-left:10%; text-align: center; display: inline-block;">
+                        <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 160px; height: 40px; background: #12AC57; border-radius: 40px">
+                            <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Recyclin Tips</div>
+                        </div>
+                        <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                            <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/5fac45310481d69418ba5a21ffdb5da4 1.png" />
+                            <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
+                        </div>
+                        </div>
+        </div>
+        </div>
+
+
+
+            <!-- resource Section -->
+    <div class="services" id="resources">
+        <img class="Recycling23"  src="images/3749437 1.png" />
+        <div class="services_overlay" >
+            <di>
+                
+            </di>
+
+            <h1 class="hServices" style=" text-align:center; color:black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">RESOURCES</h1>
+<button class="btn" style="float: inline-start; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Video on Recycling</button>
+
+            <div class="video1Container" style="  text-align: center; display: inline-block;">
+                <div class="Rectangle25" style=" width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
+                <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Video 1</div>
+                </div>
+                <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                    
+                    <video controls width="123" height="112"> 
+                        <source src="images/waste.mp4">
+                    </video> 
+                    <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="images/waste.mp4">Watch</a></button>
+                </div>
+                </div>
+               
+                <div class="video2Container" style="margin-top: 15%; margin-left:13%; text-align: center; display: inline-block;">
+                    <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
+                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Video 2</div>
+                    </div>
+                    <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                        <video controls width="130" height="129"> 
+                            <source src="images/waste.mp4">
+                        </video> 
+                        <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="images/waste.mp4">Watch</a></button>
+                    </div>
+                    </div>
+
+                    <div class="video3Container" style="margin-top: 15%; margin-left:10%; text-align: center; display: inline-block;">
+                        <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 160px; height: 40px; background: #12AC57; border-radius: 40px">
+                            <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Video 3</div>
+                        </div>
+                        <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                            <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                                <video controls width="130" height="129"> 
+                                    <source src="images/waste.mp4">
+                                </video> 
+                                <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="images/waste.mp4">Watch</a></button>
+                            </div>         </div>
+                        </div>
+                        <button class="btn" style="display:block; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Pictures Gallery</button>
+
+        </div>
+        </div>
+          <!-- Waste classiffier Section -->
+    <div class="services" id="waste-classifier">
+            <img class="Recycling23"  src="images/3749437 1.png" />
+            <div class="services_overlay" >
+                <h1 class="hServices" style=" text-align:center; black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">WASTE CLASSIFIER</h1>
+                
+                <div class="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
+                    Welcome to WasteWise, your trusted partner in sustainable waste management solutions. 
+                    At WasteWise, we are committed to transforming waste into opportunities. 
+                    With years of experience in the industry, we specialize in providing efficient and environmentally
+                     responsible waste collection, recycling, and disposal services.
+                     <br/>Our mission is simple: to help businesses and communities minimize waste generation, maximize
+                      recycling efforts, and reduce their environmental footprint. 
+                     Through innovative technologies and dedicated service, we strive to create cleaner, greener
+                      environments for generations to come.<br/>
+                    Join us in making a difference. Together, we can build a more sustainable future.</div>
+
+                <button class="btn" style="margin-top: 2%; margin-left:34%; width:30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Learn More</button>
+    </div>
+    </div>
+    <!-- Contact Us Section -->
+    <div class="services contact-us" id="contact-us">
+        <img class="Recycling23"  src="images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag 1.png" />
+        <div class="services_overlay" >
+            <div class="Rectangle47" style="margin-left:40%; padding-top:1%; text-align: center; width:20%; height: 61px; background: #12AC57; border-radius: 40px">
+                <div class="ContactUs" style="text-align: center; color: white; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">CONTACT US</div>
+            </div>
+            <div class="address" style="margin-top:3%; color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
+            <p class="text-center">Email:jewelteam@careerx.com</p>  
+            <p class="text-center">Phone:+234 8086777408</p> 
+            <p class="text-center">Address: Jewel Team No 12</p>   
+            </div>
+            <div class="CareerexJewelTeam" style="margin-top: 5%; margin-left:37%; color: black; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word"> CAREEREX JEWEL TEAM &copy; 2024</div>
+           </div>
+    </div>
+
+
+    
+  
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
