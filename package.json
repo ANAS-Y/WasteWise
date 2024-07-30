@@ -1,0 +1,19 @@
+{
+  "name": "wastewise",
+  "version": "1.0.0",
+  "description": "WasteWise (MVP), a waste management system available on a website and mobile applications (iOS and  Android) to help municipalities and businesses manage waste collection and disposal efficiently. Goals: - Reduce Waste: Minimize the amount of waste sent to landfills. - Promote Recycling: Encourage recycling through tracking and reporting tools. - Improve Efficiency: Optimize waste collection routes to reduce fuel consumption and operational costs. - Enhance Sustainability: Support environmental sustainability efforts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1"
+  }
+}
