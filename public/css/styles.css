@@ -1,0 +1,626 @@
+
+body {
+    font-family: 'JejuGothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: black;
+    background-image: url("images/recycling-2 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(3, 245, 104, 0.37) 0%, rgba(37, 37, 37, 0.37) 77%);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    background: rgba(18, 172, 87, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#heroCarousel {
+    width: 100%;
+    background: rgba(18, 172, 87, 0.45);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-caption {
+    background: rgba(18, 172, 87, 0.45);
+    padding: 1%;
+    border-radius: 10px;
+    margin-bottom: 30%;
+}
+
+.carousel-caption .title {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.carousel-caption .btn {
+    background: #21a027;
+    border-radius: 40px;
+    padding: 10px 30px;
+    color: #FFFDFD;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    margin-top: 1%;
+}
+
+.slide_overlay {
+    position: relative;
+    top: 5%;
+    text-align: center;
+    color: black;
+    width: 100%;
+    height:auto; 
+    padding:1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2%;
+    right: 2%;
+}
+
+.overlay {
+    position:relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    color: black;
+    width: 731px;
+    height: 108px; 
+    padding:1%;
+    width: 100%;
+}
+
+.services {
+    position: relative;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services img {
+    width: 100%;
+    height: auto;
+}
+
+.services_overlay {
+    position: relative;
+    top: 5%;
+    left: 2%;
+    right: 2%;
+    color: black;
+    padding:1%;
+}
+
+.overlay .title {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.overlay .btn {
+    background: #12AC57;
+    border-radius: 40px;
+    padding: 12px 30px;
+    color: #FFFDFD;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.Rectangle50, .Rectangle51 {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(99, 247, 163, 0.253) 0%, rgba(199, 224, 224, 0.199) 77%);
+    left: 0px;
+    top: 0px;
+}
+.Recycling23{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top:0%;
+  left: 0;
+}
+
+.footer {
+    background-color: #62ec7428;
+    padding: 40px 0;
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .contact-details {
+    margin-bottom: 20px;
+}
+
+.footer .contact-details p {
+    margin: 0;
+}
+
+.footer .footer-logo img {
+    width: 198px;
+    height: 39px;
+    margin-bottom: 10px;
+}
+
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer .footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .footer-links a {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer .footer-bottom {
+    font-size: 14px;
+    font-weight: 400;
+    color: #394906;
+}
+.LoginPage .Rectangle50 {
+    position: relative;
+    width: 562px;
+    height: 700px;
+    background: linear-gradient(180deg, rgba(99, 247, 163, 0.356) 0%, rgba(0, 0, 0, 0.37) 77%);
+    left: 0px;
+    top: 0px;
+}
+.loginform{
+    position: absolute;
+    text-align: center;
+    color: black;
+    left: 50%; 
+    top: 304px;
+     width:40%;
+}
+.WasteWisePng7 {
+    left:64%;
+     top: 145px;
+     width: 159px;
+    height: 32px;
+    position: absolute;
+}
+.LoginYourAccount {
+    left:62%;
+     top: 205px;
+     color: black;
+     font-size: 24px;
+     font-family: 'Playfair Display', serif;
+     font-weight: 700;
+     line-height: 16px;
+     word-wrap: break-word;
+     position: absolute;
+}
+.EnterYourCredentialsAndGetReadyToExplore{
+    left: 60%; 
+    top: 230px;
+    color: black;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    position: absolute;
+}
+.EnterYourCredentialsAndGetReadyToExplore{
+    left: 60%; 
+    top: 230px;
+    color: black;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    position: absolute;
+}
+ .SignUpPage {
+        width: 100%;
+        height: 100vh;
+        background: #FCFFFD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 4rem;
+    }
+.PexelsSarahChai72629331{
+    width: 562px;
+    height: 700px; 
+    left: 0px; top: 0px;
+    position: absolute
+}
+.TurningWasteIntoOpportunity {
+    width: 302px;
+    height: 26px;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+form-group {
+    margin-bottom: 1rem;
+}
+.VuesaxOutlineEye {
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.Eye {
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+.Eye .Vector {
+    background: #959CA2;
+}
+.Eye .Vector:nth-child(1) {
+    width: 5.77px;
+    height: 5.77px;
+    position: absolute;
+    left: 5.11px;
+    top: 5.11px;
+}
+.Eye .Vector:nth-child(2) {
+    width: 14.05px;
+    height: 12.03px;
+    position: absolute;
+    left: 0.97px;
+    top: 1.99px;
+}
+.Eye .Vector:nth-child(3) {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+.navbar {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.SignUpPage {
+    width: 100%;
+    height: 100vh;
+    background: #FCFFFD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 45%;
+}
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .hero, .services, .services_overlay, .overlay {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .Rectangle50, .Rectangle51 {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: linear-gradient(180deg, rgba(93, 226, 150, 0.158) 0%, rgba(0, 0, 0, 0.37) 77%);
+    }
+    .services img, .hero img {
+        display: none;
+        width: 100%;
+        height: auto;
+        background: rgba(11, 173, 84, 0.151);
+    }
+    .LoginPage .Rectangle50 {
+        width: 90%;
+        min-height: auto;
+        padding: 10px;
+    }
+    .loginform {
+        width: 90%;
+        max-width: none;
+        padding: 10px;
+    }
+    .LoginYourAccount {
+        font-size: 20px;
+    }
+    .EnterYourCredentialsAndGetReadyToExplore {
+        font-size: 12px;
+    }
+    .SignUpPage {
+        width: 100%;
+        height: 100vh;
+        background: #FCFFFD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 5rem;
+        margin-top: 30%;
+    }
+}
+    .services_overlay, .slide_overlay, .overlay {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+    }
+    .overlay .title {
+        font-size: 24px;
+    }
+    .carousel-caption .title {
+        font-size: 24px;
+    }
+    .carousel-caption .btn, .overlay .btn {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+
+
+.Label {
+    color: black;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+}
+.Input {
+    padding: 10px 14px;
+    background: white;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    font-size: 14px;
+    width: 100%;
+}
+.Text {
+    color: #98A2B3;
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+}
+.ButtonBase {
+    width: 100%;
+    padding: 10px 16px;
+    background: #15AD56;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    border: none;
+    color: #EAEBEC;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    cursor: pointer;
+}
+.CreateAnAccount {
+    color: black;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 6%;
+    text-align: center;
+}
+.EnterYour1{
+    margin-bottom: 10%;
+}
+.Frame763 {
+    justify-content: center;
+    display: flex;
+    gap: 2px;
+    align-items: flex-start;
+    top:10%;
+     
+}
+.Frame763 .DonTHaveAnAccount {
+    color: black;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    top:20%;
+}
+.Frame763 .SignUp {
+    color: #15AD56;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+   
+}
+.album{
+    background-image: url("images/gallery/picture\ 3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .shadow-sm .card-img-top{
+    height:250px;
+  }
+  .tips-section {
+      padding: 40px 20px;
+      background-color: #f8f9fa;
+  }
+  .tip {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .tip h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+  .tip p {
+      font-size: 16px;
+      font-weight: 400;
+  }
+  
+
+  .loading-animation {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .loading-circle {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid red;
+      border-right: 5px solid yellow;
+      border-bottom: 5px solid green;
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+  .autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+  }
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+  }
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+  .firstRow{
+    position:relative;
+    background-image: url("images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag\ 1.png");
+        background-repeat: no-repeat;
+        background-size: cover;    
+  }
+  #map {
+    height: 500px;
+    width: 100%;
+}
+#results {
+    margin-top: 20px;
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumpsite Locator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<body >
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="images/WASTE WISE PNG 6.png" width="198" height="39" alt="Waste Wise Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="location.href='index.html#services';
+                        document.getElementById('services').style.display='block';"
+                         class="nav-link" href="index.html#services">Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#waste-classifier">Waste Classifier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+<!-- Processing symbol-->
+        <div id="loadingAnimation" class="loading-animation">
+            <div class="loading-circle"></div>
+        </div>
+<section class="container-fluid my-5 ">  
+<h1 class="hServices" style="padding-top:4%; text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">DUMPSITE LOCATOR</h1>
+<div class="row p-4  text-success firstRow">
+    
+    <input id="city2" type="hidden" class="form-control" >
+    <input id="state2" type="hidden" class="form-control" >
+    <input id="address2" type="hidden" class="form-control" name="address" >
+    <input id="country2" type="hidden" class="form-control" >
+
+    <div id="mapdiv1" style="display:none; width: 100%;" class="p-2 text-success">
+        <p class="text-center text-success p-2" id="title"></p>
+          <iframe id="map" src="" width="100%" height="600px" frameborder="0" allowfullscreen ></iframe>
+      <form id="filterForm" class="col" autocomplete="off">
+          <label for="bank" id="lbank" style="display: none;color:white">Filter by:</label>
+          <select name="bank" id="category" onchange="getDumpsites()" style="display: none; " class="form-control">
+            <option value="">Select Recyclers category </option>
+            <option value="Electronic waste recycling near me"> Electronic recyclers near me</option>
+            <option value="Battery recycling near me">Battery recyclersnear me</option>
+            <option value="Paper recycling near me"> Paper recyclers near me</option>
+            <option value="Glass recycling near me">Glass recycling near me</option>
+            
+          </select>
+          <button id="getBTN" type="button" onclick="getDumpsites()"  class=" btn btn-danger">Locate Nearest Dumpsite</button>
+          <div id="direction" style="display: none;" class=" text-center col">
+          <label class="text-white">Direction to:</label>
+          <input type="hidden" name="address11" id="address1" placeholder="Address or Nearest Landmark" style="position: relative;">
+        <div class="autocomplete" style="width:300px;">
+         <input   type="text" name="address2" id="address2" size="50" placeholder="Dumpsite Destination Address">
+        </div>
+          <button  type="button" onclick="getDirection()"  id="directionBTN" class=" btn btn-primary">Get Direction to the Recycler</button>
+           </form>
+        </div>
+      </form>
+    </div>
+
+    
+        <!-- Dumpsite Locator Form-->
+      <div id="BTNgps" class="p-4 " style=" width: 100%;">
+        <div class="Rectangle51"></div>
+      <form autocomplete="off" action="">
+        <input type="hidden"  name="src2" id="src2" placeholder="src2">
+        <div class="row">
+            <div class="col-md-6 mx-auto bg-light p-4 card">
+                    <div class="form-group">
+                        <select class="form-control" id="country" required>
+                            <option>Select Country</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="state" required>
+                            <option>Select State</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control" id="city" required>
+                            <option>Select City</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input id="address" type="text" class="form-control" name="address" placeholder="Enter Nearest Land mark Address of a Place including City, State and Country" required>
+                     </div>
+                        <button type="button" class="btn btn-danger btn-lg"  id="btnLocation" onclick="GPSgetLocation()" >Get My Location</button>
+            </div>
+        </div>
+    </div>
+        </div>
+      </form>
+</section>
+    <!-- Footer Section -->
+ <Contact class="footer" id="contact-us">
+       
+    <div class="container">
+        <button class="btn btn-large btn-success m-3 text-center">CONTACT US</button>
+        <div class="contact-details">
+            <p>wastewise@careerX.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="footer-logo">
+            <img src="images/WASTE WISE PNG 6.png" alt="Waste Wise Logo">
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <div class="footer-bottom">
+            &copy; 2024 Waste Wise App. All rights reserved.
+        </div>
+    </div>
+</footer>
+<script>
+    const stateOptions = {
+      USA: ["California", "Texas", "Florida"],
+      Nigeria: ["Lagos", "Abuja", "Kano"]
+  };
+
+  const lgaOptions = {
+      Lagos: ["Ikeja", "Surulere", "Epe"],
+      Abuja: ["Garki", "Wuse", "Maitama"],
+      Kano: ["Nassarawa", "Tarauni", "Dala"],
+      California: ["Los Angeles County", "San Diego County", "Orange County"],
+      Texas: ["Harris County", "Dallas County", "Tarrant County"],
+      Florida: ["Miami-Dade County", "Broward County", "Palm Beach County"]
+  };
+
+  document.getElementById('country').addEventListener('change', function() {
+      const country = this.value;
+      const stateSelect = document.getElementById('state');
+      const lgaSelect = document.getElementById('city');
+
+      stateSelect.innerHTML = '<option>Select State</option>';
+      lgaSelect.innerHTML = '<option>Select City</option>';
+
+      if (country in stateOptions) {
+          stateOptions[country].forEach(state => {
+              const option = document.createElement('option');
+              option.value = state;
+              option.textContent = state;
+              stateSelect.appendChild(option);
+          });
+      }
+  });
+
+  document.getElementById('state').addEventListener('change', function() {
+      const state = this.value;
+      const lgaSelect = document.getElementById('city');
+
+      lgaSelect.innerHTML = '<option> Select City </option>';
+
+      if (state in lgaOptions) {
+          lgaOptions[state].forEach(lga => {
+              const option = document.createElement('option');
+              option.value = lga;
+              option.textContent = lga;
+              lgaSelect.appendChild(option);
+          });
+      }
+  });
+
+    function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+              b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+      x[i].parentNode.removeChild(x[i]);
+    }
+  }
+}
+/*execute a function when someone clicks in the document:*/
+document.addEventListener("click", function (e) {
+    closeAllLists(e.target);
+});
+}
+</script>
+<script>
+  var countries = ["Jalingo City","Bali","Gembu","Nguroje","Takum","zing"];
+  var address = "";
+    autocomplete(document.getElementById("address"),address);
+    autocomplete(document.getElementById("address2"),address);
+    </script>
+    
+<script src="js/wastewise.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

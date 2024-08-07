@@ -3,255 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Waste Wise App</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'JejuGothic', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .navbar {
-            justify-content: flex-start;
-            align-items: center;
-            gap: 40px;
-            padding: 1rem;
-            background-color: #f8f9fa;
-        }
-        .navbar a {
-            color: black;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .hero {
-            position: relative;
-            text-align: center;
-            color: black;
-        }
-        .hero img {
-            width: 100%;
-            height: auto;
-        }
-        .overlay {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -20%);
-            text-align: center;
-            color: black;
-            width: 731px;
-            height: 108px; 
-            background: rgba(18, 172, 87, 0.45);
-            padding:1%;
-            
-        }
-        .services {
-            position: relative;
-            color: black;
-        }
-        .services img {
-            width: 100%;
-            height: auto;
-        }
-        .services_overlay {
-            position: absolute;
-            top: 5%;
-            left: 2%;
-            right: 2%;
-            color: black;
-            padding:1%;
-            
-        }
-        .overlay .title {
-            font-size: 36px;
-            font-weight: 400;
-        }
-        .overlay .btn {
-            background: #12AC57;
-            border-radius: 40px;
-            padding: 12px 30px;
-            color: #FFFDFD;
-            font-size: 24px;
-            font-weight: 400;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-  
-    <!-- Navigation Bar -->
-    <nav class="navbar" id="main">
-            <!-- Brand Logo -->
-        <img class="WasteWisePng6" src="images/WASTE WISE PNG 6.png" alt="Waste Wise Logo">
-   
-        <a href="#main">Main</a>
-        <a href="#services">Services</a>
-        <a href="#resources">Resources</a>
-        <a href="#waste-classifier">Waste Classifier</a>
-        <a href="#contact-us">Contact Us</a>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <img class="Recycling22" src="images/recycling-2 2.png" alt="Recycling">
-        
-        <div class="overlay" >
-            <h1 class="title">Towards a CLEANER<br>and more CONSERVED environment</h1>
-            <button class="btn" style="width: 50%;">Learn More</button>
+<body onload="showLoading()" onloadeddata="hideLoading()">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="images/WASTE WISE PNG 6.png" width="198" height="39" alt="Waste Wise Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="location.href='index.html#services';
+                        document.getElementById('services').style.display='block';"
+                         class="nav-link" href="main#services">Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#waste-classifier">Waste Classifier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<div id="loadingAnimation" class="loading-animation">
+            <div class="loading-circle"></div>
+</div>
+<main style="">
+<!-- Hero Section -->
+<div class="hero ">
+    <img class="Recycling23"  src="images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag 1.png" />
+        <div class="Rectangle51"></div>
+        <div class="slide_overlay" >
+<!-- Carousel Section-->
+<section id="heroCarousel" class="carousel slide" data-ride="carousel" >
+    <ol class="carousel-indicators">
+        <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#heroCarousel" data-slide-to="1"></li>
+        <li data-target="#heroCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/bin copy.png" class="d-block w-100" alt="Recycling Image 1">
+            <div class="Rectangle51"></div>
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="title">Towards a CLEANER<br>and more CONSERVED environment</h1>
+                <button class="btn" onclick=" location.href ='dumplocation.html'">Locate Nearest Dumpsite</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="images/Garbage truck stock image_ Image of management, rear - 20814963.png" class="d-block w-100" alt="Recycling Image 2">
+            <div class="Rectangle51"></div>
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="title">Recycle for a Better Tomorrow</h1>
+                <button class="btn" onclick=" location.href ='recyclers.html'">Locate Nearest Recylers</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag 1.png" class="d-block w-100" alt="Recycling Image 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="title">Join the Green Movement</h1>
+                <button class="btn btn-secondary" onclick="loginURL()">Join Us Here</button>
+            </div>
         </div>
     </div>
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</section>
+</div>
+</div>
+
 
     <!-- Services Section -->
-    <div class="services" id="services">
+    <section class="services" id="services">
         <img class="Recycling23"  src="images/recycling-2 3.png" />
+        <div class="Rectangle50" ></div>
         <div class="services_overlay" >
-            <h1 class="hServices" style=" text-align:center; black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">SERVICES</h1>
-            <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">About Us</button>
+            <h1 class="hServices" style="padding-top:5%; text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">WHAT WE DO</h1>
+            <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">SERVICES </button>
             
-            <div class="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
+            <div class="welcome" id="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
                 Welcome to WasteWise, your trusted partner in sustainable waste management solutions. 
                 At WasteWise, we are committed to transforming waste into opportunities. 
                 With years of experience in the industry, we specialize in providing efficient and environmentally
                  responsible waste collection, recycling, and disposal services.
-                 <br/>Our mission is simple: to help businesses and communities minimize waste generation, maximize
-                  recycling efforts, and reduce their environmental footprint. 
-                 Through innovative technologies and dedicated service, we strive to create cleaner, greener
-                  environments for generations to come.<br/>
-                Join us in making a difference. Together, we can build a more sustainable future.</div>
-                
-                <div class="DumpsiteLContainer" style="margin-top: 15%; margin-left:15%; text-align: center; display: inline-block;">
-                <div class="Rectangle25" style=" width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
-                    <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Dumpsite Locator</div>
                 </div>
-                <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
-                    <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/—Pngtree—3d pin map location icon_9117037 1.png" />
-                    <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
-                </div>
-                </div>
-                <div class="RealTimeContainer" style="margin-top: 15%; margin-left:16%; text-align: center; display: inline-block;">
-                    <div class="Rectangle25" style="margin-right:50%; text-align: center; width:100%; height: 40px; background: #12AC57; border-radius: 40px">
-                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Waste Monitoring</div>
-                    </div>
-                    <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
-                        <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/—Pngtree—dashboard admin monitor monitoring processing_4394991 1.png" />
-                        <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
-                    </div>
-                    </div>
+                <div class="row">
+                <div class="DumpsiteLContainer col-md-4" style="margin-top:1%;  text-align: center; display: inline-block;">
 
-                    <div class="TipsContainer" style="margin-top: 15%; margin-left:10%; text-align: center; display: inline-block;">
-                        <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 160px; height: 40px; background: #12AC57; border-radius: 40px">
-                            <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Recyclin Tips</div>
-                        </div>
-                        <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                    <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/map.png" />
+                    <div class="jumbotron">
+                        <h3 style="font-weight:600 ;">Dumpsite & Recyclers Locator</h3>
+                        In order to maintain a clean environment, waste should be disposed properly.....<br>
+                        <button onclick="dumpsiteInfo()" class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
+                    </div>
+                                    </div>
+                </div>
+                <div class="RealTimeContainer col-md-4" style="margin-top: 1%;  text-align: center; display: inline-block;">
+                  
+                    <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                        <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/monitors.png" />
+                        <div class="jumbotron">
+                            <h3 style="font-weight:600 ;">Real Time Waste Management Information</h3>
+                        Toxic waste should be disposed before reaching alarming levels….. <br>
+                        <button onclick="realtime()" class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
+                    </div>
+                    </div>
+                </div>
+
+                    <div class="TipsContainer col-md-4" style="margin-top: 1%;  text-align: center; display: inline-block;">
+
+                        <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
                             <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/5fac45310481d69418ba5a21ffdb5da4 1.png" />
-                            <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
+                            <div class="jumbotron">
+                                <h3 style="font-weight:600 ;">Recycling Tips and Processes</h3>
+                            Waste wise is committed to educating the masses on the importance of recycling…..</br>
+                            <button onclick="tips()" class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">learn more</button>
                         </div>
                         </div>
+                    </div>
+                </div>
         </div>
-        </div>
+    </section>
 
 
+<!-- More Information on Services -->
+<section class="services" id="services_info" style="display:none;">
+    <img class="Recycling23"  src="images/recycling-2 3.png" />
+    <div class="Rectangle50" ></div>
+    <div class="services_overlay" >
+        <h1 class="hServices" style="padding-top:5%; text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">WHAT WE DO</h1>
+        <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">SERVICES </button>
+        
+            <div class="row">
+            <div class="DumpsiteLContainer col-md-12" style="display:none; margin-top:1%;  text-align: center; " id="dumpsite">
+            <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/map.png" />
+                <div class="jumbotron">
+                <h3 style="font-weight:600 ;">Dumpsite & Recyclers Locator</h3>
+                In order to maintain a clean environment, waste should be properly disposed. Regardless of location, waste wise helps locate dumpsite locations, recycling locations and even new recycling locations near you.
+                <br>
+                <button class="btn btn-success m-1"  onclick="location.href='dumplocation.html';">Locate Nearest Dumpsite</button>
+                <button class="btn m-2 btn-warning"  onclick="location.href='recyclers.html';">Locate Nearest Recyclers</button>
 
-            <!-- resource Section -->
-    <div class="services" id="resources">
+            </div>
+                                </div>
+            </div>
+            <div class="RealTimeContainer col-md-12" style="display: none; margin-top: 1%;  text-align: center;" id="realtime">
+              
+                <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                    <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/monitors.png" />
+                    <div class="jumbotron">
+                    <h3 style="font-weight:600 ;">Real Time Waste Management Information</h3>
+                    Toxic waste should be disposed before reaching alarming levels,Recycle materials shoule be classified and process. At wasteWise, we offer solutions for waste Management and monitoring.
+                   <br>
+                    <button class="btn m-2" style="width:30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='login.html';">Start Here</button>
+                </div>
+                </div>
+            </div>
+
+                <div class="TipsContainer col-md-12" style="display:none; margin-top: 1%;  text-align: center; " id="tips">
+
+                    <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                        <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/5fac45310481d69418ba5a21ffdb5da4 1.png" />
+                        <div class="jumbotron">
+                            <h3 style="font-weight:600 ;">Recycling Tips and Processes</h3>
+                            Waste wise is committed to educating the masses on the importance of recycling. A major part of recycling is the “sorting of waste materials.” Waste wise offers tips on the processes involved with recycling and what role you play.<br>
+                            
+                            <button class="btn m-2" style="display:inline; width: 30%; height: 40px; background: #a1c407; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='tips.html';">View Tips</button>
+                            <button class="btn m-1" style="display:inline; float:block; width: 30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='login.html';">Start Recycling Process</button>
+                           
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+<!-- resource Section -->
+<section class="services" id="resources">
         <img class="Recycling23"  src="images/3749437 1.png" />
+        <div class="Rectangle50"></div>
         <div class="services_overlay" >
-            <di>
-                
-            </di>
+<h1 class="hServices" style=" padding-top:5%; text-align:center; color:#12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">RESOURCES</h1>
+<button class="btn" style="float: block-start; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">MEDIA RESOURCES</button>
 
-            <h1 class="hServices" style=" text-align:center; color:black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">RESOURCES</h1>
-<button class="btn" style="float: inline-start; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Videos on Recycling</button>
+<div class="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
+    Welcome to WasteWise, your trusted partner in sustainable waste management solutions. 
+    At WasteWise, we are committed to transforming waste into opportunities. 
+    With years of experience in the industry, we specialize in providing efficient and environmentally
+     responsible waste collection, recycling, and disposal services.
+     </div>
+    <div class="row">
 
-            <div class="video1Container" style="  text-align: center; display: inline-block;">
-                <div class="Rectangle25" style=" width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
-                <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Video 1</div>
+        <div class="Video3Container col-md-4" style="margin-top: 1%;  text-align: center; display: inline-block;">
+
+            <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                <div class="jumbotron">
+                   <div class="DumpsiteLocator" style=" text-align: center; color: #141313; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Recyclin's Video</div>
+                   <video controls width="100%" height="129"> 
+                       <source src="videos/dumpsite.mp4">
+                   </video> 
+                   <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="videos/dumpsite.mp4">Watch</a></button>
                 </div>
-                <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
-                    
-                    <video controls width="123" height="112"> 
-                        <source src="images/waste.mp4">
-                    </video> 
-                    <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="images/waste.mp4">Watch</a></button>
-                </div>
-                </div>
-               
-                <div class="video2Container" style="margin-top: 15%; margin-left:13%; text-align: center; display: inline-block;">
-                    <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 170px; height: 40px; background: #12AC57; border-radius: 40px">
-                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Video 2</div>
-                    </div>
-                    <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
-                        <video controls width="130" height="129"> 
-                            <source src="images/waste.mp4">
-                        </video> 
-                        <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="images/waste.mp4">Watch</a></button>
-                    </div>
-                    </div>
-
-                    <div class="video3Container" style="margin-top: 15%; margin-left:10%; text-align: center; display: inline-block;">
-                        <div class="Rectangle25" style="margin-right:50%; text-align: center; width: 160px; height: 40px; background: #12AC57; border-radius: 40px">
-                            <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Video 3</div>
-                        </div>
-                        <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
-                            <div class="Rectangle28" style="width: 178px; height: 177px; background: rgba(255, 255, 255, 0.50); border-radius: 24px">
-                                <video controls width="130" height="129"> 
-                                    <source src="images/waste.mp4">
-                                </video> 
-                                <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="images/waste.mp4">Watch</a></button>
-                            </div>         </div>
-                        </div>
-                        <button class="btn" style="display:block; width: 200px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Pictures Gallery</button>
-
+           </div>
         </div>
+            <div class="Video2Container col-md-4" style="margin-top: 1%;  text-align: center; display: inline-block;">
+              
+                <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                    <div class="jumbotron">
+                       <div class="DumpsiteLocator" style=" text-align: center; color: #141313; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Classification's Video</div>
+                       <video controls width="100%" height="129"> 
+                           <source src="videos/classify.mp4">
+                       </video> 
+                       <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="videos/classify.mp4">Watch</a></button>
+                    </div>
+               </div>
+            </div>
+
+                <div class="Video3Container col-md-4" style="margin-top: 1%;  text-align: center; display: inline-block;">
+
+                    <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                        <div class="jumbotron">
+                           <div class="DumpsiteLocator" style=" text-align: center; color: #141313; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Recyclin's Video</div>
+                           <video controls width="100%" height="129"> 
+                               <source src="videos/recyclin.mp4">
+                           </video> 
+                           <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word"><a class="text-white" href="videos/recyclin.mp4">Watch</a></button>
+                        </div>
+                   </div>
+                </div>
+                <button class="btn btn-warning mx-auto text-center" style=" font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='gallery.html';">View Pictures Gallery</button>
+            </div>
+           
         </div>
+    </section>
           <!-- Waste classiffier Section -->
-    <div class="services" id="waste-classifier">
+    <section class="services" id="waste-classifier" style=" background: rgba(108, 207, 151, 0.45);">
             <img class="Recycling23"  src="images/3749437 1.png" />
             <div class="services_overlay" >
-                <h1 class="hServices" style=" text-align:center; black; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">WASTE CLASSIFIER</h1>
+            <h1 class="hServices" style="padding-top:5%; text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">WASTE CLASSIFIER</h1>
+            <button class="btn mx-auto text-center" style="width: 95%; height: 40px; background: #12AC57; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">WASTE CATEGORIES</button>
+           
+                <div class="clasiffied p-5" color:  #092b18; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
                 
-                <div class="welcome" style=" color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
-                    Waste Classifier
+                A Waste Classifier is a system used to categorize waste into different types, enabling efficient waste management and disposal.
+                By accurately classifying waste, Waste Classifiers help reduce contamination, increase recycling rates, and promote sustainable waste management practices.
+                <div class="row">
+                    <div class="DumpsiteLContainer col-md-4 mb-2" style="margin-top:1%;  text-align: center; display: inline-block;">
+    
+                    <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 5px">
+                        <img class="MapLocationIcon" style="width: 30%; height: 112px" src="images/recyclable.png" />
+                        <div class="p-2">
+                            <div class="Rectangle25 mx-auto p-1" style=" width:70%; height: 40px; background: #12AC57; border-radius: 5px">
+                                <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Recyclable Materials</div>
+                            </div>
+                            Materials that can be processed and transformed into new products, such as paper, plastic, glass, and metal.
+                                </div>
+                            </div>
+                    </div>
+                    <div class="RealTimeContainer col-md-4 mb-2" style="margin-top: 1%;  text-align: center; display: inline-block;">
+                      
+                        <div class="Rectangle28 " style=" background: rgba(255, 255, 255, 0.50); border-radius: 5px">
+                            <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/BiodegradableWaste.png" />
+                            <div class="p-2">
+                                <div class="Rectangle25  mx-auto p-1" style=" width:70%; height: 40px; background: #12AC57; border-radius: 5px">
+                                    <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Organic (Biodegradable waste)</div>
+                                </div>
+                                Biodegradable waste, including food waste, yard trimmings, and other natural materials that can be composted
+                                    </div>
+                        </div>
+                    </div>
+    
+                        <div class="TipsContainer col-md-4 mb-2" style="margin-top: 1%;  text-align: center; display: inline-block;">
+    
+                            <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 5px">
+                                <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/non recyclable.png" />
+                                <div class="p-2">
+                                    <div class="Rectangle25  mx-auto p-1" style=" width:70%; height: 40px; background: #12AC57; border-radius: 5px">
+                                        <div class="DumpsiteLocator" style=" text-align: center; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">Non-Recyclable Waste</div>
+                                    </div>
+                                    Waste that cannot be recycled or composted, such as hazardous waste, textiles, and ceramics, which require specialized disposal methods.</li>                
 
-                    A Waste Classifier is a system used to categorize waste into different types, enabling efficient waste management and disposal. The classifier sorts waste into three main categories:
-                    1. Recyclable: Materials that can be processed and transformed into new products, such as paper, plastic, glass, and metal.
-                    2. Organic: Biodegradable waste, including food waste, yard trimmings, and other natural materials that can be composted.
-                    3. Non-Recyclable: Waste that cannot be recycled or composted, such as hazardous waste, textiles, and ceramics, which require specialized disposal methods.
-                    
-                    By accurately classifying waste, Waste Classifiers help reduce contamination, increase recycling rates, and promote sustainable waste management practices.</div>
-
-                <button class="btn" style="margin-top: 2%; margin-left:40%; width:20%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="loginURL()">Continue</button>
-    </div>
-    </div>
-    <!-- Contact Us Section -->
-    <div class="services contact-us" id="contact-us">
-        <img class="Recycling23"  src="images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag 1.png" />
-        <div class="services_overlay" >
-            <div class="Rectangle47" style="margin-left:40%; padding-top:1%; text-align: center; width:20%; height: 61px; background: #12AC57; border-radius: 40px">
-                <div class="ContactUs" style="text-align: center; color: white; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word">CONTACT US</div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-4">
+                </div>
+                <button onclick=" location.href ='classifier.html'" class="btn btn-danger  " style="margin-left:40%; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Classify Your Waste</button>
             </div>
-            <div class="address" style="margin-top:3%; color: black; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">
-            <p class="text-center">Email:jewelteam@careerx.com</p>  
-            <p class="text-center">Phone:+234 8086777408</p> 
-            <p class="text-center">Address: Jewel Team No 12</p>   
-            </div>
-            <div class="Rectangle47" style="margin-left:95%; padding-top:1%; text-align: center; width:5%; height: 61px; background: #a00419; >
-                <div class="ContactUs" style="text-align: center; color: white; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word"><a href="#main" class="text-white">UP</a></div>
-            </div>
-            <div class="CareerexJewelTeam" style=" margin-left:37%; color: black; font-size: 24px; font-family: JejuGothic; font-weight: 400; word-wrap: break-word"> CAREEREX JEWEL TEAM &copy; 2024</div>
-           </div>
+        </section>
+</div>
+ <!-- Footer Section -->
+ <Contact class="footer" id="contact-us">
+       
+    <div class="container">
+        <button class="btn btn-large btn-success m-3 text-center">CONTACT US</button>
+        <div class="contact-details">
+            <p>wastewise@careerX.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="footer-logo">
+            <img src="images/WASTE WISE PNG 6.png" alt="Waste Wise Logo">
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <div class="footer-bottom">
+            &copy; 2024 Waste Wise App. All rights reserved.
+        </div>
     </div>
+</footer>
+</main>
     <script>
         function loginURL(){
             location.href ="login.html"
         }
+        function dumpsiteInfo(){
+           document.getElementById("services").style.display="none";
+           document.getElementById("services_info").style.display="block";
+           document.getElementById("dumpsite").style.display="inline-block";
+           document.getElementById("realtime").style.display="none";
+           document.getElementById("tips").style.display="none";
+        }
+        
+        function realtime(){
+           document.getElementById("services").style.display="none";
+           document.getElementById("services_info").style.display="block";
+           document.getElementById("dumpsite").style.display="none";
+           document.getElementById("realtime").style.display="inline-block";
+           document.getElementById("tips").style.display="none";
+        }
+        function tips(){
+           document.getElementById("services").style.display="none";
+           document.getElementById("services_info").style.display="block";
+           document.getElementById("tips").style.display="inline-block";
+           document.getElementById("dumpsite").style.display="none";
+           document.getElementById("realtime").style.display="none";
+          
+        }
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+     <!-- Bootstrap JS, Popper.js, and jQuery -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
 </body>
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+        
+</head>
+<body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="images/WASTE WISE PNG 6.png" width="198" height="39" alt="Waste Wise Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="location.href='index.html#services';
+                        document.getElementById('services').style.display='block';"
+                         class="nav-link" href="index.html#services">Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#waste-classifier">Waste Classifier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<!-- More Information on Services -->
+<div class="services" id="services_info" >
+    <img class="Recycling23"  src="images/recycling-2 3.png" />
+    <div class="Rectangle50" ></div>
+    <div class="services_overlay" >
+        <h1 class="hServices" style="padding-top:7%; text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">RECYCLING TIPS</h1>
+        <button class="btn" style="width: 120px; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">TIPS</button>
+        
+            <div class="row">
+            <div class="DumpsiteLContainer col-md-12" style="display:block; margin-top:1%;  text-align: center; " id="dumpsite">
+            <div class="Rectangle28" style=" background: rgba(255, 255, 255, 0.50); border-radius: 24px">
+                <img class="MapLocationIcon" style="width: 123px; height: 112px" src="images/5fac45310481d69418ba5a21ffdb5da4 1.png" />
+                <div class="jumbotron">
+                <!-- Tips Section -->
+    <div class="container tips-section">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="tip">
+                    <h3>Tip 1: Separate Waste</h3>
+                    <p>Always separate your waste into recyclables and non-recyclables. This makes the recycling process more efficient.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tip">
+                    <h3>Tip 2: Clean Your Recyclables</h3>
+                    <p>Ensure that your recyclables are clean and free from food residue. This helps in preventing contamination.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tip">
+                    <h3>Tip 3: Know What to Recycle</h3>
+                    <p>Learn about the items that can and cannot be recycled in your area. Not all plastics, for example, are recyclable.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tip">
+                    <h3>Tip 4: Reduce and Reuse</h3>
+                    <p>Before recycling, think about how you can reduce waste and reuse items. This is even better than recycling.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tip">
+                    <h3>Tip 5: Compost Organic Waste</h3>
+                    <p>Compost your organic waste to reduce the amount of waste going to landfills and create nutrient-rich soil for gardening.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tip">
+                    <h3>Tip 6: Educate Others</h3>
+                    <p>Spread the word about the importance of recycling and proper waste management to help others make a positive impact.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+                                </div>
+            </div>
+  
+
+            </div>
+    </div>
+    </div>
+
+
+   <!-- Footer Section -->
+ <Contact class="footer" id="contact-us">
+       
+    <div class="container">
+        <button class="btn btn-large btn-success m-3 text-center">CONTACT US</button>
+        <div class="contact-details">
+            <p>wastewise@careerX.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="footer-logo">
+            <img src="images/WASTE WISE PNG 6.png" alt="Waste Wise Logo">
+        </div>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <div class="footer-bottom">
+            &copy; 2024 Waste Wise App. All rights reserved.
+        </div>
+    </div>
+</footer>
+    <script>
+        function loginURL(){
+            location.href ="login.html"
+        }
+        function dumpsiteInfo(){
+           document.getElementById("services").style.display="none";
+           document.getElementById("services_info").style.display="block";
+           document.getElementById("dumpsite").style.display="inline-block";
+           document.getElementById("realtime").style.display="none";
+           document.getElementById("tips").style.display="none";
+        }
+        
+        function realtime(){
+           document.getElementById("services").style.display="none";
+           document.getElementById("services_info").style.display="block";
+           document.getElementById("dumpsite").style.display="none";
+           document.getElementById("realtime").style.display="inline-block";
+           document.getElementById("tips").style.display="none";
+        }
+        function tips(){
+           document.getElementById("services").style.display="none";
+           document.getElementById("services_info").style.display="block";
+           document.getElementById("tips").style.display="inline-block";
+           document.getElementById("dumpsite").style.display="none";
+           document.getElementById("realtime").style.display="none";
+          
+        }
+    </script>
+     <!-- Bootstrap JS, Popper.js, and jQuery -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+</body>
+</html>
