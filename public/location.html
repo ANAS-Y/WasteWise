@@ -149,90 +149,89 @@
 <body onload="loadUserName()">
 <!-- Navigation Bar -->
 <div id="nav-container"></div>
+
     <!-- Main Content -->
     <div class="content" >
      
-        <section class="container-fluid my-2 ">
-            <h1 class="hServices" style=" text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">RECYCLERS LOCATOR</h1>
-            <div class="row p-4  text-success firstRow">
-                
-                <input id="city2" type="hidden" class="form-control" >
-                <input id="state2" type="hidden" class="form-control" >
-                <input id="address2" type="hidden" class="form-control" name="address" >
-                <input id="country2" type="hidden" class="form-control" >
-            
-                <div id="mapdiv1" style="display:none; width: 100%;" class="p-2">
-                    <p class="text-center text-success p-2" id="title"></p>
-                      <iframe id="map" src="" width="100%" height="600px" frameborder="0" allowfullscreen></iframe>
-                  <form id="filterForm" class="col" autocomplete="off">
-                      <label for="bank" id="lbank" style="display: none;color:white">Filter by:</label>
-                      <select name="bank" id="bank" onchange="getRecyclers()" style="display: none;">
-                        <option value="">Select Recyclers category </option>
-                        <option value="Electronic waste recycling near me"> Electronic recyclers near me</option>
-                        <option value="Battery recycling near me">Battery recyclersnear me</option>
-                        <option value="Paper recycling near me"> Paper recyclers near me</option>
-                        <option value="Glass recycling near me">Glass recycling near me</option>
-                        
-                      </select>
-                      <button id="getBTN" type="button" onclick="getRecyclers()"  class=" btn btn-danger">Locate Nearest Recyclers</button>
-                      <div id="direction" style="display: none;" class=" text-center col">
-                      <label class="text-white">Direction to:</label>
-                      <input type="hidden" name="address11" id="address1" placeholder="Address or Nearest Landmark" style="position: relative;">
-                    <div class="autocomplete" style="width:300px;">
-                     <input   type="text" name="address2" id="address2" size="50" placeholder=" Destination Address of the Recyclers">
+        
+<!-- Processing symbol-->
+<div id="loadingAnimation" class="loading-animation">
+    <div class="loading-circle"></div>
+        </div>
+<section class="container-fluid my-2 ">  
+<h3 class="hServices" style=" text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">DROP-OFF LOCATION</3>
+<div class="row p-4  text-success firstRow">
+    
+    <input id="city2" type="hidden" class="form-control" >
+    <input id="state2" type="hidden" class="form-control" >
+    <input id="address2" type="hidden" class="form-control" name="address" >
+    <input id="country2" type="hidden" class="form-control" >
+
+    <div id="mapdiv1" style="display:none; width: 100%;" class="p-2 text-success">
+        <p class="text-center text-success p-2" id="title"></p>
+          <iframe id="map" src="" width="100%" height="600px" frameborder="0" allowfullscreen ></iframe>
+      <form id="filterForm" class="col" autocomplete="off">
+          <label for="bank" id="lbank" style="display: none;color:white">Filter by:</label>
+          <select type="hidden" name="bank" id="category" onchange="getDumpsites()" style="display: none; " class="form-control">
+            <option value="">Select Recyclers category </option>  
+          </select>
+          <div id="direction" style="display: block;" class=" text-center col">
+          <label class="text-white">Direction to:</label>
+          <input type="hidden" name="address11" id="address1" placeholder="Address or Nearest Landmark" style="position: relative;">
+        <div class="autocomplete" style="width:300px;">
+         <input   type="text" name="address2" id="address2" size="50" placeholder="Drop-off Destination Address">
+        </div>
+          <button  type="button" onclick="getDirection()"  id="directionBTN" class=" btn btn-primary">Get Direction to Drop-off Location</button>
+           </form>
+        </div>
+      </form>
+    </div>
+
+    
+        <!-- Dumpsite Locator Form-->
+      <div id="BTNgps" class="p-4 " style=" width: 100%;">
+        <div class="Rectangle51"></div>
+      <form autocomplete="off" action="">
+        <input type="hidden"  name="src2" id="src2" placeholder="src2">
+        <div class="row">
+            <div class="col-md-6 mx-auto bg-light p-4 card">
+                    <div class="form-group">
+                        <select class="form-control" id="country" required>
+                            <option>Select Country</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="USA">USA</option>
+                        </select>
                     </div>
-                      <button  type="button" onclick="getDirection()"  id="directionBTN" class=" btn btn-primary">Get Direction to Recyler</button>
-                       </form>
+                    <div class="form-group">
+                        <select class="form-control" id="state" required>
+                            <option>Select State</option>
+                        </select>
                     </div>
-                  </form>
-                </div>
-            
-                
-                    <!-- Dumpsite Locator Form-->
-                  <div id="BTNgps" class="p-4 " style=" width: 100%;">
-                    <div class="Rectangle51"></div>
-                  <form autocomplete="off" action="">
-                    <input type="hidden"  name="src2" id="src2" placeholder="src2">
-                    <div class="row">
-                        <div class="col-md-6 mx-auto bg-light p-4 card">
-                                <div class="form-group">
-                                    <select class="form-control" id="country" required>
-                                        <option>Select Country</option>
-                                        <option value="Nigeria">Nigeria</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" id="state" required>
-                                        <option>Select State</option>
-                                    </select>
-                                </div>
-            
-                                <div class="form-group">
-                                    <select class="form-control" id="city" required>
-                                        <option>Select City</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <input id="address" type="text" class="form-control" name="address" placeholder="Enter Nearest Land mark Address of a Place including City, State and Country" required>
-                                 </div>
-                                    <button type="button" class="btn btn-success btn-sm"  id="btnLocation" onclick="GPSgetLocation()" >Get My Location</button>
-                        </div>
+
+                    <div class="form-group">
+                        <select class="form-control" id="city" required>
+                            <option>Select City</option>
+                        </select>
                     </div>
-                </div>
-                    </div>
-                  </form>
-            </section>
-   <!-- Footer Section -->
-   <footer class="footer bg-light" style="width: 100%; margin: 0; margin-top: 15%;">
+                    <div class="form-group">
+                        <input id="address" type="text" class="form-control" name="address" placeholder="Enter Nearest Land mark Address of a Place including City, State and Country" required>
+                     </div>
+                        <button type="button" class="btn btn-success btn-sm"  id="btnLocation" onclick="GPSgetLocation()" >Track My Location</button>
+            </div>
+        </div>
+    </div>
+        </div>
+      </form>
+</section>
+  <!-- Footer Section -->
+  <footer class="footer bg-light" style="width: 100%; margin: 0; margin-top: 15%;">
     <div class="">
         <div class="footer-bottom text-center">
             &copy; 2024 Waste Wise App. All rights reserved.
         </div>
     </div>
 </footer>
-
     </div>
-    
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

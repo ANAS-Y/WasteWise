@@ -144,22 +144,78 @@
             background-color: #ece5e5;
             margin: 5px 0;
         }
+        <style>
+        body {
+            background-color: #f7f7f7;
+            padding: 2rem;
+        }
+
+        .card {
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        .card-header {
+            background-color: #034b11;
+            color: white;
+            border-radius: 10px 10px 0 0;
+            font-weight: bold;
+        }
+
+        .form-control, .btn {
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #034b11;
+            border-color: #034b11;
+        }
+
+        .btn-primary:hover {
+            background-color: #02850a;
+            border-color: #02850a;
+        }
+    </style>
     </style>
 </head>
 <body onload="loadUserName()">
 <!-- Navigation Bar -->
 <div id="nav-container"></div>
-    <!-- Main Content -->
-    <div class="content" >
-        <h3 class="text-center text-scuccess" style="font-weight: 800;">Waste Classifier</h3>
-        <form id="uploadForm" class="form-group">
-            <label for="images">Upload Images:</label>
-            <input type="file" id="images" name="images" class="form-control-file" required>
-            <button type="submit" class="btn btn-success mt-3" style="width: 15%; margin-left: 45%;">Classify</button>
-        </form>
-        <div id="results"></div>
 
-          <!-- Footer Section -->
+    <!-- Main Content -->
+    <div class="content ">
+        <div class="container">
+            <!-- Waste Collection Section -->
+            <div class="card">
+                <div class="card-header">
+                    Waste Collection
+                </div>
+                <div class="card-body">
+                    <form id="wasteCollectionForm">
+                        <div class="form-group">
+                            <label for="collectionArea">Collection Area</label>
+                            <input type="text" class="form-control" id="collectionArea" name="collectionArea" placeholder="Enter area for waste collection" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="collectionDate">Collection Date</label>
+                            <input type="date" class="form-control" id="collectionDate" name="collectionDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wasteType">Waste Type</label>
+                            <select class="form-control" id="wasteType" name="wasteType" required>
+                                <option value="">Select Waste Type</option>
+                                <option value="organic">Organic</option>
+                                <option value="plastic">Plastic</option>
+                                <option value="metal">Metal</option>
+                                <option value="paper">Paper</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Schedule Collection</button>
+                    </form>
+                </div>
+            </div>
+
+           <!-- Footer Section -->
       <footer class="footer bg-light" style="width: 100%; margin: 0; margin-top: 15%;">
         <div class="">
             <div class="footer-bottom text-center">
@@ -167,32 +223,31 @@
             </div>
         </div>
     </footer>
+      
     </div>
+   
+    <script>
+        document.getElementById('wasteCollectionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Waste collection scheduled!');
+        });
 
+        document.getElementById('routeOptimizationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Route optimization started!');
+        });
 
+        document.getElementById('modelManagementForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Model uploaded successfully!');
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        const ctx = document.getElementById('reportChart').getContext('2d');
-        const reportChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'Waste Collection (tons)',
-                    data: [12, 19, 3, 5, 2, 3, 7],
-                    backgroundColor: 'rgba(40, 167, 69, 0.2)',
-                    borderColor: 'rgba(40, 167, 69, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
+        function loadUserName() {
+            const user = localStorage.getItem("user");
+            document.getElementById("userName").innerHTML = user;
+        }
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -200,59 +255,30 @@
             const sidebar = document.querySelector('.sidebar');
 
             toggler.addEventListener('click', function () {
-                sidebar.classList.toggle('active');
+                sidebar.classList.toggle('hidden');
             });
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-      document.getElementById('uploadForm').addEventListener('submit', async function(event) {
-        event.preventDefault();
+        document.getElementById('uploadForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
 
-        const fileInput = document.getElementById('images');
-        const file = fileInput.files[0];
-        if (!file) {
-          alert('Please select a file.');
-          return;
-        }
-
-        const formData = new FormData();
-        formData.append('image', file);
-
-        try {
-          const response = await fetch('/api/classify', {
-            method: 'POST',
-            body: formData
-          });
-
-          if (!response.ok) {
-            throw new Error('Error classifying image');
-          }
-
-          const result = await response.json();
-          displayResults(result.predictions, result.category);
-        } catch (error) {
-          console.error(error);
-          alert('Error classifying image');
-        }
-      });
-
-      function displayResults(predictions, category) {
-        const resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = `
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title mt-3">Categories of Objects:</h5>
-              <h5 class=" Text-success card-title">The List of Recyclable Objects Found in the Watse materials are shown below:</h5>
-              <ul class="list-group list-group-flush">
-                
-                ${predictions.map(p => `<li class="list-group-item">${p.label} </li>`).join('')}
-              </ul>
-              <h5 class="card-text text-danger">The List of ${category}  Found in the Watse materials are shown below:</h5>
-            </div>
-          </div>
-        `;
-      }
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `<p>Classification Result: ${data.result}</p>`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
     </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

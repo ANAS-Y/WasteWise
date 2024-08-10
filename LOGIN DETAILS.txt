@@ -1,0 +1,7 @@
+ADMIN
+Email:admin@gmail.com
+password: 12345678
+
+USER
+Email:anasnguroje@gmail.com
+password: 12345678

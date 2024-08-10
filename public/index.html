@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Wise App</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <base href="/">
 </head>
 <body onload="showLoading()" onloadeddata="hideLoading()">
         <!-- Navigation Bar -->
@@ -19,12 +20,12 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="main">Main</a>
+                        <a class="nav-link" href="api/page/main">Main</a>
                     </li>
                     <li class="nav-item">
                         <a onclick="location.href='index.html#services';
                         document.getElementById('services').style.display='block';"
-                         class="nav-link" href="main#services">Services
+                         class="nav-link" href="#services">Services
                         </a>
                     </li>
                     <li class="nav-item">
@@ -57,11 +58,18 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
+            <img src="images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag 1.png" class="d-block w-100" alt="Recycling Image 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="title">Join the Green Movement</h1>
+                <button class="btn btn-secondary" onclick=" location.href ='api/auth/register'">Join Us Here</button>
+            </div>
+        </div>
+        <div class="carousel-item ">
             <img src="images/bin copy.png" class="d-block w-100" alt="Recycling Image 1">
             <div class="Rectangle51"></div>
             <div class="carousel-caption d-none d-md-block">
                 <h1 class="title">Towards a CLEANER<br>and more CONSERVED environment</h1>
-                <button class="btn" onclick=" location.href ='dumplocation.html'">Locate Nearest Dumpsite</button>
+                <button class="btn" onclick=" location.href ='api/page/dumplocation'">Locate Nearest Dumpsite</button>
             </div>
         </div>
         <div class="carousel-item">
@@ -69,16 +77,10 @@
             <div class="Rectangle51"></div>
             <div class="carousel-caption d-none d-md-block">
                 <h1 class="title">Recycle for a Better Tomorrow</h1>
-                <button class="btn" onclick=" location.href ='recyclers.html'">Locate Nearest Recylers</button>
+                <button class="btn" onclick=" location.href ='api/page/recyclers'">Locate Nearest Recylers</button>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="images/volunteering-activism-eco-aware-african-girl-is-cleaning-park-she-is-putting-trash-into-bag 1.png" class="d-block w-100" alt="Recycling Image 3">
-            <div class="carousel-caption d-none d-md-block">
-                <h1 class="title">Join the Green Movement</h1>
-                <button class="btn btn-secondary" onclick="loginURL()">Join Us Here</button>
-            </div>
-        </div>
+
     </div>
     <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -163,8 +165,8 @@
                 <h3 style="font-weight:600 ;">Dumpsite & Recyclers Locator</h3>
                 In order to maintain a clean environment, waste should be properly disposed. Regardless of location, waste wise helps locate dumpsite locations, recycling locations and even new recycling locations near you.
                 <br>
-                <button class="btn btn-success m-1"  onclick="location.href='dumplocation.html';">Locate Nearest Dumpsite</button>
-                <button class="btn m-2 btn-warning"  onclick="location.href='recyclers.html';">Locate Nearest Recyclers</button>
+                <button class="btn btn-success m-1"  onclick="location.href='api/page/dumplocation';">Locate Nearest Dumpsite</button>
+                <button class="btn m-2 btn-warning"  onclick="location.href='api/page/recyclers';">Locate Nearest Recyclers</button>
 
             </div>
                                 </div>
@@ -177,7 +179,7 @@
                     <h3 style="font-weight:600 ;">Real Time Waste Management Information</h3>
                     Toxic waste should be disposed before reaching alarming levels,Recycle materials shoule be classified and process. At wasteWise, we offer solutions for waste Management and monitoring.
                    <br>
-                    <button class="btn m-2" style="width:30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='login.html';">Start Here</button>
+                    <button class="btn m-2" style="width:30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='api/auth/login';">Start Here</button>
                 </div>
                 </div>
             </div>
@@ -191,7 +193,7 @@
                             Waste wise is committed to educating the masses on the importance of recycling. A major part of recycling is the “sorting of waste materials.” Waste wise offers tips on the processes involved with recycling and what role you play.<br>
                             
                             <button class="btn m-2" style="display:inline; width: 30%; height: 40px; background: #a1c407; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='tips.html';">View Tips</button>
-                            <button class="btn m-1" style="display:inline; float:block; width: 30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='login.html';">Start Recycling Process</button>
+                            <button class="btn m-1" style="display:inline; float:block; width: 30%; height: 40px; background: #12AC57; border-radius: 40px; color: #FFFDFD; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word" onclick="location.href='api/page/recyclers';">Start Recycling Process</button>
                            
                     </div>
                     </div>
@@ -312,7 +314,7 @@
                     </div>
                     <div class="row p-4">
                 </div>
-                <button onclick=" location.href ='classifier.html'" class="btn btn-danger  " style="margin-left:40%; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Classify Your Waste</button>
+                <button onclick=" location.href ='api/page/classifier'" class="btn btn-danger  " style="margin-left:40%; font-size: 18px; font-family: JejuGothic; font-weight: 500; word-wrap: break-word">Classify Your Waste</button>
             </div>
         </section>
 </div>
