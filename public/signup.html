@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
-    <base href="/">
+    <link href="css/styles.css" rel="stylesheet">
       
 </head>
-<body style="background-image: url('images/pexels-sarah-chai-7262933\ 1.png'); background-size: cover; background-repeat: no-repeat;">
+<body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">
@@ -21,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Main</a>
+                    <a class="nav-link" href="main">Main</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.html#services">Services</a>
@@ -38,35 +37,33 @@
             </ul>
         </div>
     </nav>
-<div id="header" style="margin: 10%;">
+
+    <div class="SignUpPage">
         <div>
-            <h2 class="text-center" style="font-weight: 600;">Create an Account.</h2>
-            <h5 class="text-center">Enter your credentials and get ready to explore!</h5>
+            <div class="CreateAnAccount">Create an Account.</div>
+            <div class="EnterYour1">Enter your credentials and get ready to explore!</div>
         </div>
-    <div class="container mt-4 ">
-       
-        <form id="registerForm" style="border-radius: 20px; padding: 6%; background: linear-gradient(180deg, rgba(3, 245, 104, 0.644) 0%, rgba(37, 37, 37, 0.37) 77%);
-">
-            <div class="form-group" >
+        <form id="registrationForm">
+            <div class="form-group" style="width:50%">
                 <div style="width: 48%; display: inline-block; padding: 1%;">
                     <label for="firstName" class="Label">First Name</label>
-                    <input type="text" class="Input" id="firstName" placeholder="First Name" required>
+                    <input type="text" class="Input" id="firstName" placeholder="First Name">
                 </div>
                 <div style="width: 48%; display: inline-block; padding: 1%;">
                     <label for="lastName" class="Label">Last Name</label>
-                    <input type="text" class="Input" id="lastName" placeholder="Last Name" required>
+                    <input type="text" class="Input" id="lastName" placeholder="Last Name">
                 </div>
             </div>
 
-            <div class="form-group" style="width: 96%;">
+            <div class="form-group">
                 <label for="email" class="Label">Email Address</label>
-                <input type="email" class="Input" id="email" placeholder="Enter Address" required>
+                <input type="email" class="Input" id="email" placeholder="Enter Address">
             </div>
-            <div class="form-group" style="width: 96%;">
+            <div class="form-group">
                 <label for="phone" class="Label">Phone Number</label>
-                <input type="text" class="Input" id="phone" placeholder="Phone Number" required>
+                <input type="text" class="Input" id="phone" placeholder="Phone Number">
             </div>
-            <div class="form-group" style="width: 96%;">
+            <div class="form-group">
                 <label for="country" class="Label">Country</label>
                 <select class="Input" id="country">
                     <option>Select Country</option>
@@ -75,13 +72,13 @@
                 </select>
             </div>
             <div class="form-group">
-                <div style="width: 48%; display: inline-block; padding: 1%;">
+                <div style="width: 45%; display: inline-block; padding: 1%;">
                     <label for="state" class="Label">State</label>
                     <select class="Input" id="state">
                         <option>Select State</option>
                     </select>
                 </div>
-                <div style="width: 48%; display: inline-block; padding: 1%;">
+                <div style="width: 45%; display: inline-block; padding: 1%;">
                     <label for="lga" class="Label">LGA</label>
                     <select class="Input" id="lga">
                         <option>Select LGA</option>
@@ -89,74 +86,28 @@
                 </div>
             </div>
             <div class="form-group">
-                <div style="width: 48%; display: inline-block; padding: 1%;">
+                <div style="width: 45%; display: inline-block; padding: 1%;">
                     <label for="password" class="Label">Password</label>
-                    <input type="password" class="Input" id="password" placeholder="Enter Password" required>
+                    <input type="password" class="Input" id="password" placeholder="Enter Password">
                 </div>
-                <div style="width: 48%; display: inline-block; padding: 1%;">
+                <div style="width: 45%; display: inline-block; padding: 1%;">
                     <label for="confirmPassword" class="Label">Confirm Password</label>
                     <input type="password" class="Input" id="confirmPassword" placeholder="Enter Confirm Password">
                 </div>
             </div>
             <div id="alertPlaceholder"></div>
-            <div id="alertContainer"></div>
-            <button type="submit" class="btn btn-lg btn-success mx-auto text-center" style="">Sign Up</button>
-            <div class="Frame763">
-                <div class="DonTHaveAnAccount text-white">Alredy Have account?</div>
-                <div class="SignUp text-white "><a style="text-decoration: none;color:Yellow;" class="" href="api/auth/login"> Login to Continue</a></div>
-            </div>        </form>
-    
+            <button type="submit" class="ButtonBase">Sign up</button>
+        </form>
+        <div class="Frame763">
+            <div class="AlreadyHaveAnAccount">Already have an account?</div>
+            <div class="SignIn"><a href="login.html">Sign in</a></div>
+        </div>
     </div>
-
+    
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#registerForm').on('submit', function(e) {
-                e.preventDefault();
-
-                const formData = {
-                    firstName: $('#firstName').val(),
-                    lastName: $('#lastName').val(),
-                    email: $('#email').val(),
-                    phone: $('#phone').val(),
-                    country: $('#country').val(),
-                    state: $('#state').val(),
-                    lga: $('#lga').val(),
-                    password: $('#password').val(),
-                    confirmPassword: $('#confirmPassword').val()
-
-                };
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/api/auth/register',
-                    data: JSON.stringify(formData),
-                    contentType: 'application/json',
-                    success: function(response) {
-                        $('#alertContainer').html(`
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                Registration successful! Login to Continue...
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        `);
-                    },
-                        error: function(xhr, status, error) {
-        errorMessage = xhr.responseJSON.error;
-        $('#alertContainer').html(`
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                Error Occurred: ${errorMessage}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            `);
-            }
-
-        });
-     });
-});
         const stateOptions = {
             USA: ["California", "Texas", "Florida"],
             Nigeria: ["Lagos", "Abuja", "Kano"]
@@ -205,15 +156,47 @@
             }
         });
 
-    </script>
-      <script src="/js/scripts.js"> </script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/dashboard.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jtable/2.4.0/jquery.jtable.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        function showAlert(message, type) {
+            const alertPlaceholder = document.getElementById('alertPlaceholder');
+            const alertHTML = `
+                <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            `;
+            alertPlaceholder.innerHTML = alertHTML;
+        }
 
+        $(document).ready(function() {
+            $('#registrationForm').submit(function(event) {
+                event.preventDefault();
+                const formData = {
+                    firstName: $('#firstName').val(),
+                    lastName: $('#lastName').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    country: $('#country').val(),
+                    state: $('#state').val(),
+                    lga: $('#lga').val(),
+                    password: $('#password').val(),
+                    confirmPassword: $('#confirmPassword').val()
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/index.html',  // Update this URL to your registration endpoint
+                    data: formData,
+                    success: function(response) {
+                        showAlert('Registration successful!', 'success');
+                    },
+                    error: function(error) {
+                        showAlert('An error occurred. Please try again.', 'danger');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
