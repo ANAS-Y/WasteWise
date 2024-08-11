@@ -227,14 +227,9 @@
     </div>
    
     <script>
-         document.getElementById('#wasteCollectionForm').addEventListener('submit', function(event) {
+         document.getElementById('wasteCollectionForm').addEventListener('submit', function(event) {
             event.preventDefault();
             alert('Route optimization started!');
-        });
-      
-            $(document).ready(function() {
-    // AJAX submission for Collection Form
-    $('#wasteCollectionForm').on('submit', function(event) {
         event.preventDefault();
 
         const collectionData = {
@@ -258,7 +253,7 @@
             }
         });
     });
-        });
+        
 
         document.getElementById('routeOptimizationForm').addEventListener('submit', function(event) {
             event.preventDefault();

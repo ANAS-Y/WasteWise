@@ -14,6 +14,6 @@ exports.submitCollectionDetails = async (req, res) => {
         await newCollection.save();
         res.status(201).json({ message: 'Collection details submitted successfully!' });
     } catch (error) {
-        res.status(500).json({ error: 'Failed to submit collection details' });
+        res.status(500).json({ error: 'Failed to submit collection details 1' });
     }
 };

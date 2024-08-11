@@ -67,7 +67,7 @@ app.use((req, res, next) => {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/waisewise')
+mongoose.connect('mongodb+srv://waste123:@WasteWise123@wastewise.g3z4y.mongodb.net/?retryWrites=true&w=majority&appName=wasteWise')
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(3000, () => {

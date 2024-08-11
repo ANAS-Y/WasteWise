@@ -5,3 +5,10 @@ password: 12345678
 USER
 Email:anasnguroje@gmail.com
 password: 12345678
+
+DB
+Psw: @WasteWise123
+User: waste123
+DBwasteWise
+IP: 105.112.212.32
+MONGO_URI=mongodb://localhost:27017/waste_management
