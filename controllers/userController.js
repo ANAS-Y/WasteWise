@@ -3,13 +3,18 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 // Register a new user
-exports.registerUser= async (req, res) => {
-  
+exports.registerUser = async (req, res) => {
+  try {
+    const { username, email, password, role } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = new User({ username, email, password: hashedPassword, role });
+    await newUser.save();
+    res.status(201).json(newUser);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
-      res.status(201).json({ message: 'User registered successfully' });
-  
-
-}
 // Login user
 exports.loginUser = async (req, res) => {
   try {
@@ -31,7 +36,7 @@ exports.loginUser = async (req, res) => {
 };
 
 // Get all users (admin only)
-exports.getUsers = async (req, res) => {
+exports.getUsers2 = async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
@@ -39,5 +44,19 @@ exports.getUsers = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+
+// Get all users (admin only)
+exports.getUsers = async (req, res) => {
+    try {
+        const users = await User.find().select('-password');
+        res.status(200).json({ users });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+// Other controller methods...
+
 
 // Define other controller functions similarly...

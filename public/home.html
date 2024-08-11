@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Wise Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <base href="/">
+    <script src="js/adminNav.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: white;
+        }
+
+        .sidebar {
+            color: white;
+            height: 100vh;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.65rem;
+            position: fixed;
+            transition: all 0.3s ease-in-out;
+            background: #034b11ce;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 1rem;
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 1rem;
+        }
+
+        .nav-link:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+        }
+
+        .top-title {
+            padding: 1rem;
+        }
+
+        .content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+                padding: 0.5rem 1rem;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 1000;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 60px;
+                width: 100%;
+            }
+
+            .nav-item {
+                display: none;
+            }
+
+            .navbar-toggler {
+                display: inline-block;
+            }
+
+            .sidebar.active .nav-item {
+                display: block;
+            }
+
+            .sidebar.active {
+                height: 100vh;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .nav-link {
+                font-size: 0.875rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+        }
+
+        .navbar-toggler {
+            display: none;
+            background-color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .navbar-toggler-icon {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #610707;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-toggler {
+                display: block;
+            }
+        }
+
+        .footer {
+            background-color: #034b11ce;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body onload="loadUserName()">
+    <!-- Sidebar -->
+    <div id="nav-container"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="row top-title bg-light">
+            <div class="col-sm-10 text-center">
+                <script>
+                    function loadUserName() {
+                        const user = localStorage.getItem("user");
+                        document.getElementById("userName").innerHTML = user;
+                    }
+                </script>
+                <img src="images/WASTE WISE PNG 6.png" width="198" height="39" alt="Waste Wise Logo">
+                <p class="text-warning text-left">Welcome! <span class="text-success" id="userName"></span></p>
+            </div>
+            <div class="col-sm-2 text-center text-success">
+                <i class="bi bi-person" style="font-size: 30px; display: block;"></i>
+                <a class="btn btn-sm btn-secondary text-center" href="api/auth/logout">Log out</a>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="reportChart"></canvas>
+        </div>
+
+              <!-- Footer -->
+              <div class="footer bg-light text-scuccess text-muted">
+                © 2024 Waste Wise. All rights reserved.
+               </div>
+    </div>
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('reportChart').getContext('2d');
+        const reportChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Waste Collection (tons)',
+                    data: [12, 19, 3, 5, 2, 3, 7],
+                    backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                    borderColor: 'rgba(40, 167, 69, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggler = document.querySelector('.navbar-toggler');
+            const sidebar = document.querySelector('.sidebar');
+
+            toggler.addEventListener('click', function () {
+                sidebar.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

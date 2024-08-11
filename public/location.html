@@ -159,7 +159,7 @@
     <div class="loading-circle"></div>
         </div>
 <section class="container-fluid my-2 ">  
-<h4 class="hServices" style=" text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">Dumpsite Locator</h4>
+<h4 class="hServices" style=" text-align:center; color: #12AC57; font-size: 24px; font-family: JejuGothic; font-weight: 600; word-wrap: break-word">Drop-off Location</4>
 <div class="row p-4  text-success firstRow">
     
     <input id="city2" type="hidden" class="form-control" >
@@ -175,14 +175,13 @@
           <select type="hidden" name="bank" id="category" onchange="getDumpsites()" style="display: none; " class="form-control">
             <option value="">Select Recyclers category </option>  
           </select>
-          <button id="getBTN" type="button" onclick="getDumpsites()"  class=" btn btn-danger">Locate Nearest Dumpsite</button>
-          <div id="direction" style="display: none;" class=" text-center col">
+          <div id="direction" style="display: block;" class=" text-center col">
           <label class="text-white">Direction to:</label>
           <input type="hidden" name="address11" id="address1" placeholder="Address or Nearest Landmark" style="position: relative;">
         <div class="autocomplete" style="width:300px;">
-         <input   type="text" name="address2" id="address2" size="50" placeholder="Dumpsite Destination Address">
+         <input   type="text" name="address2" id="address2" size="50" placeholder="Drop-off Destination Address">
         </div>
-          <button  type="button" onclick="getDirection()"  id="directionBTN" class=" btn btn-primary">Get Direction to Dumpsite</button>
+          <button  type="button" onclick="getDirection()"  id="directionBTN" class=" btn btn-primary">Get Direction to Drop-off Location</button>
            </form>
         </div>
       </form>
@@ -190,7 +189,7 @@
 
     
         <!-- Dumpsite Locator Form-->
-      <div id="BTNgps" class="p-2 " style=" width: 100%;">
+      <div id="BTNgps" class="p-4 " style=" width: 100%;">
         <div class="Rectangle51"></div>
       <form autocomplete="off" action="">
         <input type="hidden"  name="src2" id="src2" placeholder="src2">
@@ -471,7 +470,12 @@
         autocomplete(document.getElementById("address"),address);
         autocomplete(document.getElementById("address2"),address);
         </script>
-        
+            <script>
+        function loadUserName() {
+            const user = localStorage.getItem("user");
+            document.getElementById("userName").innerHTML = user;
+        }
+    </script>
     <script src="js/wastewise.js"></script>
     <script src="js/scripts.js"></script>
     <!-- Bootstrap JS, Popper.js, and jQuery -->

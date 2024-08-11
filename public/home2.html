@@ -149,28 +149,62 @@
 <body onload="loadUserName()">
 <!-- Navigation Bar -->
 <div id="nav-container"></div>
+
     <!-- Main Content -->
-    <div class="content" >
-        <h4 class="text-center text-success" style="font-weight: 800;">Waste Classifier</h4>
-        <form id="uploadForm" class="form-group">
-            <label for="images">Upload Images:</label>
-            <input type="file" id="images" name="images" class="form-control-file" required>
-            <button type="submit" class="btn btn-success mt-3" style="width: 15%; margin-left: 45%;">Classify</button>
-        </form>
-        <div id="results"></div>
-
-          <!-- Footer Section -->
-      <footer class="footer bg-light" style="width: 100%; margin: 0; margin-top: 15%;">
-        <div class="">
-            <div class="footer-bottom text-center">
-                &copy; 2024 Waste Wise App. All rights reserved.
-            </div>
+    <div class="content ">
+        <h4 class="text-center text-success" style="font-weight: 600;">Well Come to Waste Wise System</h4>
+        <div class="chart-container">
+            <canvas id="reportChart"></canvas>
         </div>
-    </footer>
+         <!-- Footer Section -->
+         <footer class="footer bg-light" style="width: 100%; margin: 0; margin-top: 15%;">
+            <div class="">
+                <div class="footer-bottom text-center">
+                    &copy; 2024 Waste Wise App. All rights reserved.
+                </div>
+            </div>
+        </footer>
     </div>
-
+   
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function loadUserName() {
+            const user = localStorage.getItem("user");
+            document.getElementById("userName").innerHTML = user;
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggler = document.querySelector('.navbar-toggler');
+            const sidebar = document.querySelector('.sidebar');
+
+            toggler.addEventListener('click', function () {
+                sidebar.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `<p>Classification Result: ${data.result}</p>`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        
+    </script>
     <script>
         const ctx = document.getElementById('reportChart').getContext('2d');
         const reportChart = new Chart(ctx, {
@@ -194,65 +228,6 @@
             }
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggler = document.querySelector('.navbar-toggler');
-            const sidebar = document.querySelector('.sidebar');
-
-            toggler.addEventListener('click', function () {
-                sidebar.classList.toggle('active');
-            });
-        });
-    </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-      document.getElementById('uploadForm').addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        const fileInput = document.getElementById('images');
-        const file = fileInput.files[0];
-        if (!file) {
-          alert('Please select a file.');
-          return;
-        }
-
-        const formData = new FormData();
-        formData.append('image', file);
-
-        try {
-          const response = await fetch('/api/classify', {
-            method: 'POST',
-            body: formData
-          });
-
-          if (!response.ok) {
-            throw new Error('Error classifying image');
-          }
-
-          const result = await response.json();
-          displayResults(result.predictions, result.category);
-        } catch (error) {
-          console.error(error);
-          alert('Error classifying image');
-        }
-      });
-
-      function displayResults(predictions, category) {
-        const resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = `
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title mt-3">Categories of Objects:</h5>
-              <h5 class=" Text-success card-title">The List of Recyclable Objects Found in the Watse materials are shown below:</h5>
-              <ul class="list-group list-group-flush">
-                
-                ${predictions.map(p => `<li class="list-group-item">${p.label} </li>`).join('')}
-              </ul>
-              <h5 class="card-text text-danger">The List of ${category}  Found in the Watse materials are shown below:</h5>
-            </div>
-          </div>
-        `;
-      }
-    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

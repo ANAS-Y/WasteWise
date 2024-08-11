@@ -1,0 +1,53 @@
+div id="nav-container"></div>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="images/WASTE WISE PNG 6.png" width="198" height="39" alt="Waste Wise Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="api/page/classifier"><i class="bi bi-filter-square"></i> Waste Classifier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="api/page/recyclers"><i class="bi bi-recycle"></i>Recycling Tracker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="api/page/dumplocation"><i class="bi bi-geo-alt"></i> Dumpsite Tracker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning text-left" href="api/auth/logout">Welcome! <span class="text-success" id="userName"></span> <i class="bi bi-person"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar ">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="api/page/userDashboard"><i class="bi bi-speedometer2"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="api/page/route"><i class="bi bi-truck"></i> Route Optimization</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="api/page/location"><i class="bi bi-map"></i> Drop-off Location</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="api/page/collection"><i class="bi bi-calendar-check"></i> Collection Scheduling</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-box-seam"></i> Waste Collection</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-recycle"></i>Local Recyclers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="api/auth/logout"><i class="bi bi-person"></i>Log Out</a>
+            </li>
+        </ul>
+    </div>
