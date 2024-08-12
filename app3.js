@@ -66,16 +66,11 @@ app.use((req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, 'public', 'error.html'));
 });
 
-
-
-  app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+// Connect to MongoDB
+  mongoose.connect('mongodb+srv://waste123:%40WasteWise123@wastewise.g3z4y.mongodb.net/wasteWise?retryWrites=true&w=majority')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((err) => {
+    console.error('Detailed Error:', err.message);
   });
-    // Connect to MongoDB
-    mongoose.connect('mongodb+srv://waste123:%40WasteWise123@wastewise.g3z4y.mongodb.net/wasteWise?retryWrites=true&w=majority')
-    .then(() => {
-      console.log('Connected to MongoDB');
-    })
-    .catch((err) => {
-      console.error('Detailed Error:', err.message);
-    });
