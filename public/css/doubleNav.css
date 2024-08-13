@@ -23,7 +23,7 @@ body {
     align-items: center;
     padding: 1rem;
     z-index: 1000;
-    margin-top: 56px; /* Adjusted for alignment */
+    margin-top: 81px; /* Adjusted for alignment */
     transition: transform 0.3s ease;
 }
 

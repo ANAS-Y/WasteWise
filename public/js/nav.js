@@ -11,6 +11,14 @@ if(userRole=="admin"){
       navContainer.innerHTML = navHtml;
     });
 }
+else if(userRole=="staff"){
+  const navContainer = document.getElementById('nav-container');
+  fetch('include/staffNav.html')
+    .then(response => response.text())
+    .then(navHtml => {
+      navContainer.innerHTML = navHtml;
+    });
+}
 else{
   const navContainer = document.getElementById('nav-container');
   fetch('include/userNav.html')
