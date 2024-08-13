@@ -38,11 +38,15 @@
             </ul>
         </div>
     </nav>
-<div id="header" style="margin: 10%;">
+<div id="header"  class="SignUp-container">
         <div>
             <h2 class="text-center" style="font-weight: 600;">Create an Account.</h2>
             <h5 class="text-center">Enter your credentials and get ready to explore!</h5>
         </div>
+        <div class="Frame763">
+            <div class="DonTHaveAnAccount text-white">Alredy Have account?</div>
+            <div class="SignUp text-white "><a style="text-decoration: none;color:Yellow;" class="" href="api/auth/login"> Login to Continue</a></div>
+        </div> 
     <div class="container mt-4 ">
        
         <form id="registerForm" style="border-radius: 20px; padding: 6%; background: linear-gradient(180deg, rgba(3, 245, 104, 0.644) 0%, rgba(37, 37, 37, 0.37) 77%);
@@ -100,14 +104,20 @@
             </div>
             <div id="alertPlaceholder"></div>
             <div id="alertContainer"></div>
-            <button type="submit" class="btn btn-lg btn-success mx-auto text-center" style="">Sign Up</button>
-            <div class="Frame763">
-                <div class="DonTHaveAnAccount text-white">Alredy Have account?</div>
-                <div class="SignUp text-white "><a style="text-decoration: none;color:Yellow;" class="" href="api/auth/login"> Login to Continue</a></div>
-            </div>        </form>
+            <div class="form-group text-center">
+            <button type="submit" class="btn btn-lg btn-success mx-auto text-center" style="width: 30%;">Sign Up</button>
+        </div> 
+        </form>
     
     </div>
-
+          <!-- Footer Section -->
+          <footer class="footer bg-light" style="width: 100%; margin: 0; margin-top: 15%;">
+            <div class="">
+                <div class="footer-bottom text-center">
+                    &copy; 2024 Waste Wise App. All rights reserved.
+                </div>
+            </div>
+        </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(document).ready(function() {

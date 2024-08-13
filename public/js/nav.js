@@ -1,8 +1,5 @@
 
-function loadUserName() {
-    const user = localStorage.getItem("user");
-    document.getElementById("userName").innerHTML = user;
-}
+
 const userRole = localStorage.getItem("userRole");
 function loadNav() {
 if(userRole=="admin"){
@@ -24,3 +21,18 @@ else{
 }
 }
 document.addEventListener('DOMContentLoaded', loadNav);
+
+
+function loadUserName() {
+  const user = localStorage.getItem("user");
+  document.getElementById("userName").innerHTML = user;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const toggler = document.querySelector('.navbar-toggler');
+  const sidebar = document.querySelector('.sidebar');
+
+  toggler.addEventListener('click', function () {
+      sidebar.classList.toggle('active');
+  });
+});

@@ -280,6 +280,10 @@ body {
         flex-direction: column;
         padding-top: 4rem;
     }
+    .SignUp-container{
+        padding-top:2%;
+        margin-top: 8%;
+    }
 .PexelsSarahChai72629331{
     width: 562px;
     height: 700px; 
@@ -360,6 +364,16 @@ form-group {
     flex-direction: column;
     padding-top: 45%;
 }
+.loginForm{
+    margin-top:15%;
+     width: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 25%;
+}
+
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     .hero, .services, .services_overlay, .overlay {
@@ -385,13 +399,19 @@ form-group {
         min-height: auto;
         padding: 10px;
     }
-    .loginform {
-        width: 90%;
+    .loginForm {
+        width: 95%;
         max-width: none;
-        padding: 10px;
+        margin-top:30%; 
+        margin-left:2%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        
     }
     .LoginYourAccount {
         font-size: 20px;
+        margin-top: 30%;
     }
     .EnterYourCredentialsAndGetReadyToExplore {
         font-size: 12px;
@@ -404,8 +424,14 @@ form-group {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 5rem;
+        padding-top:50%;
         margin-top: 30%;
+    }
+    .SignUp-container{
+        padding-top: 5rem;
+        margin-top: 13%;
+        font-size: 100%;
+        padding-bottom: 5rem;
     }
 }
     .services_overlay, .slide_overlay, .overlay {
@@ -426,7 +452,6 @@ form-group {
         font-size: 18px;
         padding: 8px 20px;
     }
-
 
 
 .Label {
